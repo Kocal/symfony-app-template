@@ -56,6 +56,28 @@ Encore
         corejs: 3
     })
 
+    // enables Vue support
+    .enableVueLoader((vueLoaderOptions) => {
+        // Remove attributes `data-testid` and `:data-testid` when building for production.
+        // Those attributes are used to make end-to-end tests easier to write and read.
+        if (Encore.isProduction()) {
+            vueLoaderOptions.compilerOptions = vueLoaderOptions.compilerOptions || {};
+            vueLoaderOptions.compilerOptions.modules = vueLoaderOptions.compilerOptions.modules || [];
+            vueLoaderOptions.compilerOptions.modules.push({
+                preTransformNode(astEl) {
+                    ['data-testid', ':data-testid'].forEach(dAttr => {
+                        if (astEl.attrsMap[dAttr]) {
+                            delete astEl.attrsMap[dAttr];
+                            astEl.attrsList = astEl.attrsList.filter(x => x.name !== dAttr);
+                        }
+                    });
+
+                    return astEl;
+                },
+            });
+        }
+    })
+
     // enables Sass/SCSS support
     .enableSassLoader()
 
