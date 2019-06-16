@@ -12,6 +12,7 @@ parameters:
         - %rootDir%/../../../src/Migrations
         - %rootDir%/../../../spec
         - %rootDir%/../../../tests
+        - %rootDir%/../../../features
 
 # to avoid import rules that enforce PHPDoc on class properties
 services:
