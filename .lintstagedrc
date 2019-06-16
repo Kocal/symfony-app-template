@@ -6,7 +6,7 @@
       "./vagrant-wrapper.sh php bin/phpstan analyse --level 7 --no-ansi --no-progress",
       "git add"
     ],
-    "assets/**/*.{js,jsx,vue}": [
+    "{assets,cypress}/**/*.{js,jsx,vue}": [
       "eslint --fix",
       "git add"
     ],

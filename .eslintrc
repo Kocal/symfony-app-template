@@ -1,6 +1,12 @@
 
 {
   "extends": ["@yproximite/yprox/prettier"],
+  "plugins": [
+    "cypress"
+  ],
+  "env": {
+    "cypress/globals": true
+  },
   "settings": {
     "import/resolver": "webpack"
   }

@@ -1,0 +1,6 @@
+{
+  "baseUrl": "http://symfony-app-template.vm:8000",
+  "chromeWebSecurity": false,
+  "viewportWidth": 1289,
+  "viewportHeight": 720
+}
