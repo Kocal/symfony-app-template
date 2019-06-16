@@ -6,8 +6,9 @@
     "build:prod": "encore production",
     "build:dev": "encore dev",
     "dev-server": "encore dev-server --hot --public http://symfony-app-template.vm:8080 --host 0.0.0.0 --disable-host-check",
-    "lint": "$npm_execpath run lint:js",
-    "lint:js": "eslint assets cypress --ext .js,.vue --fix"
+    "lint": "$npm_execpath run lint:js; $npm_execpath run lint:css",
+    "lint:js": "eslint assets cypress --ext .js,.vue --fix",
+    "lint:css": "stylelint 'assets/**/*.scss' --fix"
   },
   "husky": {
     "hooks": {
@@ -24,6 +25,7 @@
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "@vue/babel-preset-jsx": "^1.0.0",
     "@yproximite/eslint-config-yprox": "^1.2.8",
+    "@yproximite/stylelint-config-wordpress": "^1.1.0",
     "autoprefixer": "^9.6.0",
     "babel-eslint": "^10.0.1",
     "core-js": "^3.0.0",
@@ -38,6 +40,9 @@
     "prettier": "^1.18.2",
     "sass": "^1.21.0",
     "sass-loader": "^7.1.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-prettier": "^1.1.1",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10"
   },

@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import App from './App.vue';
-import './index.sass';
 
 console.log('Hello world, from home page!');
 

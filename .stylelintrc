@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@yproximite/stylelint-config-wordpress",
+    "stylelint-prettier/recommended"
+  ],
+}
