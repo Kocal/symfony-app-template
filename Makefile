@@ -52,3 +52,38 @@ provision-nginx: provision
 ## Provision php
 provision-php: export ANSIBLE_TAGS = manala_php
 provision-php: provision
+
+
+###########
+# Install #
+###########
+
+## Install application
+install-app: composer-install init-db
+install-app:
+	bin/console cache:clear
+	yarn install
+	yarn build:dev
+
+install-app@test: composer-install init-db@test
+install-app@test:
+	APP_ENV=test bin/console cache:clear
+	yarn install
+	yarn build:dev
+
+################
+# Common tasks #
+################
+
+composer-install:
+	composer install --verbose --no-interaction
+
+init-db:
+	bin/console doctrine:database:drop --force --if-exists --no-interaction
+	bin/console doctrine:database:create --no-interaction
+	# bin/console doctrine:migrations:migrate --no-interaction
+
+init-db@test:
+	APP_ENV=test bin/console doctrine:database:drop --force --if-exists --no-interaction
+	APP_ENV=test bin/console doctrine:database:create --no-interaction
+	# APP_ENV=test bin/console doctrine:migrations:migrate --no-interaction
