@@ -39,6 +39,43 @@ addons:
         - symfony-app-template.vm
         - www.symfony-app-template.vm
 
+stages:
+    - test
+
+jobs:
+    include:
+        - stage: test
+          name: Lint
+          script:
+              - |
+                  composer validate
+                  bin/console lint:twig templates
+                  bin/console lint:yaml config --parse-tags
+                  bin/php-cs-fixer fix --verbose --diff --dry-run src/
+                  APP_ENV=test bin/console doctrine:schema:validate
+
+                  yarn lint:js --no-fix
+                  yarn lint:css --no-fix
+
+        - name: PHPStan, PHPUnit, PHPSpec, Behat
+          script:
+              - |
+                  php bin/phpstan analyse src/
+                  php bin/phpunit
+                  php bin/phpspec run
+                  bin/behat --format progress
+
+        - name: Cypress
+          if: type = pull_request
+          script:
+              - |
+                  make init-db@test
+                  make install-app@test
+                  APP_ENV=test php bin/console server:start
+                  yarn cypress install
+                  yarn cypress run --config video=false
+                  APP_ENV=test php bin/console server:stop
+
 before_install:
     # PostgreSQL
     #- sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
@@ -51,7 +88,7 @@ before_install:
     - echo date.timezone = Europe/Paris >> $INI
     - echo memory_limit = -1 >> $INI
     - echo session.gc_probability = 0 >> $INI
-    - echo "extension=apcu.so >> $INI
+    - echo extension=apcu.so >> $INI
 
     # Node
     - nvm install v10
@@ -59,30 +96,9 @@ before_install:
     - npm install --global yarn
 
 before_script:
+    # PHP/Composer
     - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
     - composer install --no-interaction --prefer-dist
 
-script:
-    - make install-app@test
-    - composer validate
-    # Node
-    - yarn
-    - yarn lint:js --no-fix
-    - yarn lint:css --no-fix
-    - yarn build:prod
-    # PHP
-    - APP_ENV=test bin/console doctrine:schema:validate
-    - bin/console lint:twig templates
-    - bin/console lint:yaml config --parse-tags
-    - bin/php-cs-fixer fix --verbose --diff --dry-run src/
-    - php bin/phpstan analyse src/
-    - php bin/phpunit
-    - php bin/phpspec run
-    - bin/behat --format progress
-    # Cypress, reset database before running it
-    - if [[ "${TRAVIS_EVENT_TYPE}" = pull_request ]]; then make init-db@test; fi
-    - if [[ "${TRAVIS_EVENT_TYPE}" = pull_request ]]; then yarn build:dev; fi
-    - if [[ "${TRAVIS_EVENT_TYPE}" = pull_request ]]; then APP_ENV=test php bin/console server:start; fi
-    - if [[ "${TRAVIS_EVENT_TYPE}" = pull_request ]]; then yarn cypress install; fi
-    - if [[ "${TRAVIS_EVENT_TYPE}" = pull_request ]]; then yarn cypress run --config video=false; fi
-    - if [[ "${TRAVIS_EVENT_TYPE}" = pull_request ]]; then APP_ENV=test php bin/console server:stop; fi
+    # Node/Yarn
+    - yarn install --frozen-lockfile
