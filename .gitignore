@@ -17,6 +17,7 @@
 /bin/*
 !/bin/.gitkeep
 !/bin/php-cs-fixer*
+!/bin/security-checker*
 /public/bundles/
 /var/*
 !/var/.gitkeep
