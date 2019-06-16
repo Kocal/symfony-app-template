@@ -81,6 +81,8 @@ Encore
                 },
             });
         }
+    }, {
+        useJsx: true
     })
 
     // enables Sass/SCSS support
