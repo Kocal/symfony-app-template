@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="fr" trgLang="fr">
+  <file id="messages.fr">
+    <unit id="iD.auju" name="translated_message">
+      <notes>
+        <note category="file-source" priority="1">templates/home/index.html.twig:20</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>translated_message</source>
+        <target>Je suis un message traduit</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>
