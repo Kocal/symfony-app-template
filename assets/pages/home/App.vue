@@ -1,11 +1,11 @@
 <template>
-    <div>
-      Hello world!
+  <div>
+    Hello world!
 
-      <SymfonyAppTemplateButton size="xs" outline>
-        Je suis un bouton
-      </SymfonyAppTemplateButton>
-    </div>
+    <SymfonyAppTemplateButton size="xs" outline>
+      Je suis un bouton
+    </SymfonyAppTemplateButton>
+  </div>
 </template>
 
 <script>
@@ -15,6 +15,6 @@ export default {
   name: 'App',
   components: {
     SymfonyAppTemplateButton,
-  }
-}
+  },
+};
 </script>
