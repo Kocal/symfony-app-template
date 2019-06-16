@@ -14,6 +14,11 @@
       "pre-commit": "lint-staged"
     }
   },
+  "browserslist": [
+    "> 0.5%",
+    "not ie 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@symfony/webpack-encore": "^0.27.0",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
