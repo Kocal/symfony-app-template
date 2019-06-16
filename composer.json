@@ -16,6 +16,7 @@
     "php": "^7.3",
     "ext-ctype": "*",
     "ext-iconv": "*",
+    "php-translation/symfony-bundle": "^0.8.1",
     "sensio/framework-extra-bundle": "^5.1",
     "symfony/asset": "*",
     "symfony/console": "*",
