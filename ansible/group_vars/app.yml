@@ -1,5 +1,10 @@
 ---
 
+# PostgreSQL (ANXS.postgresql)
+postgresql_version: 11
+postgresql_locale: fr_FR.UTF-8
+postgresql_ctype: fr_FR.UTF-8
+
 app_options:
   apt_preferences:
     - php@sury_php
@@ -13,7 +18,6 @@ app_options:
   mariadb:               true
   mariadb_version:       '10.3'
   postgresql:            false
-  postgresql_version:    '9.5'
   elasticsearch:         false
   elasticsearch_version: '6'
   redis:                 true
@@ -56,6 +60,7 @@ app_patterns:
     - mbstring
     - xml
     # App
+    - pgsql
 
   php_configs:
     - file: app_opcache.ini

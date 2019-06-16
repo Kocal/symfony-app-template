@@ -7,6 +7,7 @@
       - manala.ansible-galaxy
       - manala.deploy
       - manala.skeleton
+      - ANXS.postgresql
   roles:
     - manala.ansible-galaxy
 
