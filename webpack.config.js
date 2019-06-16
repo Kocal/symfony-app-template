@@ -55,12 +55,6 @@ Encore
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
 
-    // enables @babel/preset-env polyfills
-    .configureBabel(() => {}, {
-        useBuiltIns: 'usage',
-        corejs: 3
-    })
-
     // enable ESLint loader
     .enableEslintLoader(options => {
         delete options.parser;
@@ -89,12 +83,12 @@ Encore
                 },
             });
         }
-    }, {
-        useJsx: true
     })
 
     // enables Sass/SCSS support
-    .enableSassLoader()
+    .enableSassLoader(options => {
+        options.implementation = require('sass');
+    })
 
     // enables PostCSS support
     .enablePostCssLoader()

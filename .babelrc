@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false,
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ],
+    "@vue/babel-preset-jsx"
+  ],
+  "env": {
+    "test": {
+      "presets": [["@babel/env", { "targets": { "node": "current" } }]]
+    }
+  }
+}
