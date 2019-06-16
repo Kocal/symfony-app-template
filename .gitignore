@@ -20,6 +20,7 @@
 /.env.*.local
 /bin/*
 !/bin/.gitkeep
+!/bin/console
 !/bin/php-cs-fixer*
 !/bin/security-checker*
 /public/bundles/
