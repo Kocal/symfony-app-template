@@ -1,0 +1,21 @@
+{
+    "name": "symfony-app-template",
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "build:prod": "encore production",
+        "build:dev": "encore dev",
+        "dev-server": "encore dev-server --hot --public http://symfony-app-template.vm:8080 --host 0.0.0.0 --disable-host-check"
+    },
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.27.0",
+        "autoprefixer": "^9.6.0",
+        "core-js": "^3.0.0",
+        "postcss-loader": "^3.0.0",
+        "sass": "^1.21.0",
+        "sass-loader": "^7.1.0"
+    },
+    "dependencies": {
+        "jquery": "^3.4.1"
+    }
+}
