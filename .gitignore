@@ -7,12 +7,16 @@
 /ansible/roles/*
 !ansible/roles/.gitkeep
 
+# PHP-CS-Fixer
+/.php_cs.cache
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
 /.env.*.local
 /bin/*
 !/bin/.gitkeep
+!/bin/php-cs-fixer*
 /public/bundles/
 /var/*
 !/var/.gitkeep
