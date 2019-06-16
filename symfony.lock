@@ -144,6 +144,15 @@
     "phpdocumentor/type-resolver": {
         "version": "0.4.0"
     },
+    "phpspec/php-diff": {
+        "version": "v1.1.0"
+    },
+    "phpspec/phpspec": {
+        "version": "5.1.0"
+    },
+    "phpspec/prophecy": {
+        "version": "1.8.1"
+    },
     "phpstan/phpstan": {
         "version": "0.11.8"
     },
@@ -167,6 +176,18 @@
     },
     "psr/log": {
         "version": "1.1.0"
+    },
+    "sebastian/comparator": {
+        "version": "3.0.2"
+    },
+    "sebastian/diff": {
+        "version": "3.0.2"
+    },
+    "sebastian/exporter": {
+        "version": "3.1.0"
+    },
+    "sebastian/recursion-context": {
+        "version": "3.0.0"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
