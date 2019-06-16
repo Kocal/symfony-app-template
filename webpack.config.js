@@ -61,6 +61,14 @@ Encore
         corejs: 3
     })
 
+    // enable ESLint loader
+    .enableEslintLoader(options => {
+        delete options.parser;
+    })
+    .configureLoaderRule('eslint', loader => {
+        loader.test = /\.(jsx?|vue)$/;
+    })
+
     // enables Vue support
     .enableVueLoader((vueLoaderOptions) => {
         // Remove attributes `data-testid` and `:data-testid` when building for production.

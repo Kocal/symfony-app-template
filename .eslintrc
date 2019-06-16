@@ -1,0 +1,7 @@
+
+{
+  "extends": ["@yproximite/yprox/prettier"],
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}

@@ -5,15 +5,23 @@
     "scripts": {
         "build:prod": "encore production",
         "build:dev": "encore dev",
-        "dev-server": "encore dev-server --hot --public http://symfony-app-template.vm:8080 --host 0.0.0.0 --disable-host-check"
+        "dev-server": "encore dev-server --hot --public http://symfony-app-template.vm:8080 --host 0.0.0.0 --disable-host-check",
+        "lint": "$npm_execpath run lint:js",
+        "lint:js": "eslint assets --ext .js,.vue --fix"
     },
     "devDependencies": {
         "@symfony/webpack-encore": "^0.27.0",
         "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
         "@vue/babel-preset-jsx": "^1.0.0",
+        "@yproximite/eslint-config-yprox": "^1.2.8",
         "autoprefixer": "^9.6.0",
+        "babel-eslint": "^10.0.1",
         "core-js": "^3.0.0",
+        "eslint": "^5.16.0",
+        "eslint-import-resolver-webpack": "^0.11.1",
+        "eslint-loader": "^2.1.2",
         "postcss-loader": "^3.0.0",
+        "prettier": "^1.18.2",
         "sass": "^1.21.0",
         "sass-loader": "^7.1.0",
         "vue-loader": "^15.7.0",
