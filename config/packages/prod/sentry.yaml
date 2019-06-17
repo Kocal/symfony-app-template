@@ -1,0 +1,8 @@
+sentry:
+    dsn: '%env(COMMIT_ID)%'
+
+    options:
+        excluded_exceptions:
+            - 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException'
+            - 'Symfony\Component\HttpKernel\Exception\BadRequestHttpException'
+            - 'Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException'
