@@ -45,6 +45,7 @@
   "require-dev": {
     "behat/behat": "^3.5",
     "behat/symfony2-extension": "^2.1",
+    "hautelook/alice-bundle": "^2.5",
     "phpspec/phpspec": "^5.1",
     "phpstan/phpstan-doctrine": "^0.11.5",
     "phpstan/phpstan-shim": "^0.11.8",

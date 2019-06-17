@@ -1,0 +1,8 @@
+App\Entity\User:
+    user_1:
+        email: user1@example.com
+        password: <encodePassword(@user_1, 'test')>
+
+    user_2:
+        email: user2@example.com
+        password: <encodePassword(@user_2, 'test')>

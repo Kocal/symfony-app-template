@@ -81,9 +81,11 @@ composer-install:
 init-db:
 	bin/console doctrine:database:drop --force --if-exists --no-interaction
 	bin/console doctrine:database:create --no-interaction
+	bin/console doctrine:schema:update --force --no-interaction
 	# bin/console doctrine:migrations:migrate --no-interaction
 
 init-db@test:
 	APP_ENV=test bin/console doctrine:database:drop --force --if-exists --no-interaction
 	APP_ENV=test bin/console doctrine:database:create --no-interaction
+	APP_ENV=test bin/console doctrine:schema:update --force --no-interaction
 	# APP_ENV=test bin/console doctrine:migrations:migrate --no-interaction
