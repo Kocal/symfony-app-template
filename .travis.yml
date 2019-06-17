@@ -46,10 +46,15 @@ jobs:
     include:
         - stage: test
           name: Linting files, running basic tests (PHPStan, PHPUnit, phpspec, behat)s
-        - name: Cypress
+        - name: End-to-end tests
           if: type = pull_request
           script:
               - make install-app@test
+
+              # Cypress
+              - bin/behat --format progress
+
+              # Cypress
               - APP_ENV=test php bin/console server:start
               - yarn cypress install
               - yarn cypress run --config video=false
@@ -101,4 +106,3 @@ script:
     - php bin/phpstan analyse src/
     - php bin/simple-phpunit
     - php bin/phpspec run
-    - bin/behat --format progress
