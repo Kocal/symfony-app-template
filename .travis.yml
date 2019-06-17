@@ -8,11 +8,11 @@ env:
     global:
         - TZ=Europe/Paris
 
-        # If using MariaDB
+        # If using MariaDB
         - DATABASE_URL=mysql://travis@127.0.0.1:3306/symfony_app_template_test
         - DATABASE_SERVER_VERSION=11.3
 
-        # If using PostgreSQL (uncomment)
+        # If using PostgreSQL (uncomment)
         #- DATABASE_URL=pgsql://postgres@127.0.0.1:5433/symfony_app_template_test
         #- DATABASE_SERVER_VERSION=11.3
 
@@ -45,39 +45,18 @@ stages:
 jobs:
     include:
         - stage: test
-          name: Lint
-          script:
-              - |
-                  composer validate
-                  bin/console lint:twig templates
-                  bin/console lint:yaml config --parse-tags
-                  bin/php-cs-fixer fix --verbose --diff --dry-run src/
-                  APP_ENV=test bin/console doctrine:schema:validate
-
-                  yarn lint:js --no-fix
-                  yarn lint:css --no-fix
-
-        - name: PHPStan, PHPUnit, PHPSpec, Behat
-          script:
-              - |
-                  php bin/phpstan analyse src/
-                  php bin/phpunit
-                  php bin/phpspec run
-                  bin/behat --format progress
-
+          name: Linting files, running basic tests (PHPStan, PHPUnit, phpspec, behat)s
         - name: Cypress
           if: type = pull_request
           script:
-              - |
-                  make init-db@test
-                  make install-app@test
-                  APP_ENV=test php bin/console server:start
-                  yarn cypress install
-                  yarn cypress run --config video=false
-                  APP_ENV=test php bin/console server:stop
+              - make install-app@test
+              - APP_ENV=test php bin/console server:start
+              - yarn cypress install
+              - yarn cypress run --config video=false
+              - APP_ENV=test php bin/console server:stop
 
 before_install:
-    # PostgreSQL
+    # PostgreSQL
     #- sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
     #- sudo service postgresql restart
     #- sleep 1
@@ -98,7 +77,28 @@ before_install:
 before_script:
     # PHP/Composer
     - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
-    - composer install --no-interaction --prefer-dist
+    - composer install --no-interaction
 
     # Node/Yarn
     - yarn install --frozen-lockfile
+
+    # Bootstrap app
+    - yarn build:dev
+    - make init-db@test
+
+script:
+    - composer validate
+
+    - bin/console lint:twig templates
+    - bin/console lint:yaml config --parse-tags
+
+    - bin/php-cs-fixer fix --verbose --diff --dry-run src/
+    - APP_ENV=test bin/console doctrine:schema:validate
+
+    - yarn lint:js --no-fix
+    - yarn lint:css --no-fix
+
+    - php bin/phpstan analyse src/
+    - php bin/simple-phpunit
+    - php bin/phpspec run
+    - bin/behat --format progress
