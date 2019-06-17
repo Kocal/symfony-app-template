@@ -1,5 +1,6 @@
 describe('Home', () => {
   before(() => {
+    cy.bootstrapApp();
     cy.visit('/');
   });
 

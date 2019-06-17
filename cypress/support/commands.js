@@ -10,6 +10,24 @@
 //
 //
 // -- This is a parent command --
+
+Cypress.Commands.add('execVagrant', command => {
+  return cy.exec(`./vagrant-wrapper.sh ${command}`);
+});
+
+Cypress.Commands.add('reloadDatabase', () => {
+  cy.execVagrant('make init-db@test');
+});
+
+// -- This is a parent command --
+Cypress.Commands.add('bootstrapApp', () => {
+  cy.reloadDatabase();
+
+  // Make sure we clear and whitelist the auth cookie
+  cy.clearCookie('MOCKSESSID');
+  Cypress.Cookies.defaults({ whitelist: ['MOCKSESSID'] });
+});
+
 Cypress.Commands.add('login', (email, password) => {
   cy.get('input[name="email"]').type(email);
   cy.get('input[name="password"]').type(`${password}{enter}`);
