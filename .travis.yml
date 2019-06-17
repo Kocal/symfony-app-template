@@ -1,0 +1,108 @@
+language: php
+dist: trusty
+
+php:
+    - '7.3'
+
+env:
+    global:
+        - TZ=Europe/Paris
+
+        # If using MariaDB
+        - DATABASE_URL=mysql://travis@127.0.0.1:3306/symfony_app_template_test
+        - DATABASE_SERVER_VERSION=11.3
+
+        # If using PostgreSQL (uncomment)
+        #- DATABASE_URL=pgsql://postgres@127.0.0.1:5433/symfony_app_template_test
+        #- DATABASE_SERVER_VERSION=11.3
+
+cache:
+    yarn: true
+    directories:
+        - vendor
+        - node_modules
+        - ~/.composer/cache/files
+        - ~/.cache
+        - ~/.nvm
+
+notifications:
+    email: false
+
+addons:
+    mariadb: '10.3'
+    #postgresql: '11'
+    apt:
+        packages:
+            #- postgresql-11
+            #- postgresql-client-11
+    hosts:
+        - symfony-app-template.vm
+        - www.symfony-app-template.vm
+
+stages:
+    - test
+
+jobs:
+    include:
+        - stage: test
+          name: Linting files, running basic tests (PHPStan, PHPUnit, phpspec, behat)s
+        - name: End-to-end tests
+          if: type = pull_request
+          script:
+              - make install-app@test
+
+              # Cypress
+              - bin/behat --format progress
+
+              # Cypress
+              - APP_ENV=test php bin/console server:start
+              - yarn cypress install
+              - yarn cypress run --config video=false
+              - APP_ENV=test php bin/console server:stop
+
+before_install:
+    # PostgreSQL
+    #- sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
+    #- sudo service postgresql restart
+    #- sleep 1
+
+    # PHP
+    - phpenv config-rm xdebug.ini || echo "xdebug not available"
+    - INI=~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+    - echo date.timezone = Europe/Paris >> $INI
+    - echo memory_limit = -1 >> $INI
+    - echo session.gc_probability = 0 >> $INI
+    - echo extension=apcu.so >> $INI
+
+    # Node
+    - nvm install v10
+    - nvm use 10
+    - npm install --global yarn
+
+before_script:
+    # PHP/Composer
+    - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
+    - composer install --no-interaction
+
+    # Node/Yarn
+    - yarn install --frozen-lockfile
+
+    # Bootstrap app
+    - yarn build:dev
+    - make init-db@test
+
+script:
+    - composer validate
+
+    - bin/console lint:twig templates
+    - bin/console lint:yaml config --parse-tags
+
+    - bin/php-cs-fixer fix --verbose --diff --dry-run src/
+    - APP_ENV=test bin/console doctrine:schema:validate
+
+    - yarn lint:js --no-fix
+    - yarn lint:css --no-fix
+
+    - php bin/phpstan analyse src/
+    - php bin/simple-phpunit
+    - php bin/phpspec run
