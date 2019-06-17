@@ -18,6 +18,7 @@
     "ext-iconv": "*",
     "php-translation/symfony-bundle": "^0.8.1",
     "sensio/framework-extra-bundle": "^5.1",
+    "sentry/sentry-symfony": "^3.0",
     "symfony/asset": "*",
     "symfony/console": "*",
     "symfony/dotenv": "*",

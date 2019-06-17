@@ -1,5 +1,6 @@
 const path = require('path');
 const Encore = require('@symfony/webpack-encore');
+const dotenv = require('dotenv');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -106,6 +107,19 @@ Encore
     .configureWatchOptions(watchOptions => {
         watchOptions.poll = 250;
     })
+
+    // Configure environment variables to inject into assets
+    // Global env vars from `process.env` take priority over env vars from `.env` file.
+    .configureDefinePlugin(options => {
+        const env = dotenv.config();
+        if (env.error) {
+          throw env.error;
+        }
+
+        ['SENTRY_DSN'].forEach(envVar => {
+            options['process.env'][envVar] = JSON.stringify(process.env[envVar] || env.parsed[envVar]);
+        })
+      });
 ;
 
 module.exports = Encore.getWebpackConfig();
