@@ -81,6 +81,7 @@ composer-install:
 init-db:
 	bin/console doctrine:database:drop --force --if-exists --no-interaction
 	bin/console doctrine:database:create --no-interaction
+	bin/console doctrine:schema:update --dump-sql
 	bin/console doctrine:schema:update --force --no-interaction # to comment when we will use migrations
 	# bin/console doctrine:migrations:migrate --no-interaction
 	bin/console hautelook:fixtures:load --no-interaction
@@ -88,6 +89,7 @@ init-db:
 init-db@test:
 	APP_ENV=test bin/console doctrine:database:drop --force --if-exists --no-interaction
 	APP_ENV=test bin/console doctrine:database:create --no-interaction
+	APP_ENV=test bin/console doctrine:schema:update --dump-sql
 	APP_ENV=test bin/console doctrine:schema:update --force --no-interaction # to comment when we will use migrations
 	# APP_ENV=test bin/console doctrine:migrations:migrate --no-interaction
 	APP_ENV=test bin/console hautelook:fixtures:load --no-interaction

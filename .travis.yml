@@ -10,7 +10,7 @@ env:
 
         # If using MariaDB
         - DATABASE_URL=mysql://travis@127.0.0.1:3306/symfony_app_template_test
-        - DATABASE_SERVER_VERSION=11.3
+        - DATABASE_SERVER_VERSION=mariadb-10.3.14
 
         # If using PostgreSQL (uncomment)
         #- DATABASE_URL=pgsql://postgres@127.0.0.1:5433/symfony_app_template_test
@@ -98,7 +98,9 @@ script:
     - bin/console lint:yaml config --parse-tags
 
     - bin/php-cs-fixer fix --verbose --diff --dry-run src/
+    - APP_ENV=test bin/console doctrine:schema:update --dump-sql
     - APP_ENV=test bin/console doctrine:schema:validate
+    - APP_ENV=test bin/console doctrine:schema:update --dump-sql
 
     - yarn lint:js --no-fix
     - yarn lint:css --no-fix
