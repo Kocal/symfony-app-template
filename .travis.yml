@@ -98,9 +98,7 @@ script:
     - bin/console lint:yaml config --parse-tags
 
     - bin/php-cs-fixer fix --verbose --diff --dry-run src/
-    - APP_ENV=test bin/console doctrine:schema:update --dump-sql
     - APP_ENV=test bin/console doctrine:schema:validate
-    - APP_ENV=test bin/console doctrine:schema:update --dump-sql
 
     - yarn lint:js --no-fix
     - yarn lint:css --no-fix
