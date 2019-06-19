@@ -17,7 +17,6 @@ return [
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class                     => ['all' => true],
     Translation\Bundle\TranslationBundle::class                                => ['all' => true, 'test' => false],
     Sentry\SentryBundle\SentryBundle::class                                    => ['prod' => true],
-    Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle::class   => ['all' => true],
     Nelmio\Alice\Bridge\Symfony\NelmioAliceBundle::class                       => ['dev' => true, 'test' => true],
     Fidry\AliceDataFixtures\Bridge\Symfony\FidryAliceDataFixturesBundle::class => ['dev' => true, 'test' => true],
     Hautelook\AliceBundle\HautelookAliceBundle::class                          => ['dev' => true, 'test' => true],
