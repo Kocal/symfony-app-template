@@ -11,7 +11,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @ApiResource(
  *    itemOperations={"get"},
- *    collectionOperations={"get"}
+ *    collectionOperations={"get"},
+ *    normalizationContext={"ignored_attributes": {"password", "salt"}}
  * )
  */
 class User implements UserInterface
