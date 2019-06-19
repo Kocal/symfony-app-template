@@ -36,6 +36,16 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $apiKey;
+
+    public function __construct()
+    {
+        $this->apiKey = bin2hex(random_bytes(20));
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -112,5 +122,17 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getApiKey(): string
+    {
+        return $this->apiKey;
+    }
+
+    public function setApiKey(string $apiKey): self
+    {
+        $this->apiKey = $apiKey;
+
+        return $this;
     }
 }
