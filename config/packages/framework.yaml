@@ -7,11 +7,17 @@ framework:
     # Enables session support. Note that the session will ONLY be started if you read or write from it.
     # Remove or comment this section to explicitly disable session support.
     session:
-        handler_id: ~
-        cookie_secure: auto
-        cookie_samesite: lax
+        handler_id: snc_redis.session.handler
+        cookie_lifetime: 864000 # = 10 days
 
     #esi: true
     #fragments: true
     php_errors:
         log: true
+
+    cache:
+        app: cache.adapter.redis
+        default_redis_provider: 'snc_redis.default'
+        pools:
+            app.cache.tags:
+                adapter: cache.app
