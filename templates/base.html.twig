@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        {% if app.user %}
+            <meta name="api-key" content="{{ app.user.apiKey }}"/>
+        {% endif %}
         {% block stylesheets %}{% endblock %}
     </head>
     <body>

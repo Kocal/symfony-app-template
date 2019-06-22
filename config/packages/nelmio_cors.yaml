@@ -1,0 +1,12 @@
+nelmio_cors:
+    defaults:
+        origin_regex: true
+        allow_origin:
+            - '^https?://(localhost|symfony-app-template\.vm)(:[0-9]+)?$' #
+            - '^https?://(demo\.)?symfony-app-template.fr$' # prod
+        allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'PATCH', 'DELETE']
+        allow_headers: ['Content-Type', 'Authorization']
+        expose_headers: ['Link']
+        max_age: 3600
+    paths:
+        '^/': ~

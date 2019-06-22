@@ -2,6 +2,7 @@ describe('Home', () => {
   before(() => {
     cy.bootstrapApp();
     cy.visit('/');
+    cy.login('user1@example.com', 'test');
   });
 
   it('Render the home', () => {
