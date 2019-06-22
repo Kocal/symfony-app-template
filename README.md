@@ -8,13 +8,14 @@
 - MariaDB 13 (installé et configuré) et PostgreSQL 10 (nécessite de dé-commenter certaines parties du code)
 - Redis
 - Symfony 4.3.1
-- Authentification JWT, extensions Doctrine, fixtures, API Platform
+- Doctrine extensions & Fixtures
+- API key authentication & API Platform
 - PHPStan, PHP-CS-Fixer, SensioLabs Security Checker
-- PHPUnit, phpspec, Behat, Cypress, Jest
+- PHPUnit, phpspec, Behat (+ Mink & Behatch), Cypress, Jest (+ Vue & JSX)
 - Webpack Encore, Vue, JSX, ESLint/Prettier
 - Hooks de pré-commit
 - Un wrapper Vagrant
-- Sentry (PHP et JS)
+- Sentry (PHP et JS) configuré
 - Travis configuré
 - Scrutinizer configuré
 
