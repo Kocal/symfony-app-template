@@ -2,6 +2,7 @@ App\Entity\User:
     user_1:
         email: user1@example.com
         password: <encodePassword(@user_1, 'test')>
+        apiKey: 81b87be71decdd74ee12a34ad4c278b401bc2a09
         createdAt: <(new DateTime('2019-01-01 12:00:00'))>
 
     user_2:
