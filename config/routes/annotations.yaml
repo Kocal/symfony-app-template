@@ -7,3 +7,9 @@ controllers_api:
     type: annotation
     defaults:
         _format: json
+
+controllers_debug:
+    resource: ../../src/Controller/Debug/
+    type: annotation
+    prefix: _debug
+    condition: '%kernel.debug% == true'

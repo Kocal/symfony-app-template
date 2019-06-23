@@ -1,0 +1,19 @@
+You have sent a {{ app.request.method }} request.<br />
+
+<div class="headers">
+    {{ app.request.server|length }} header(s) received.
+    {% for key, value in app.request.server %}
+        <div class="header">
+            {{ key }} = {{ value }}
+        </div>
+    {% endfor %}
+</div>
+
+<div class="parameters">
+    {{ app.request.request|length }} parameter(s) received.
+    {% for key, value in app.request.request %}
+        <div class="parameter">
+            {{ key }} = {{ value }}
+        </div>
+    {% endfor %}
+</div>
