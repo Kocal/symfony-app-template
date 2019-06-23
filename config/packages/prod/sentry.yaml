@@ -1,5 +1,5 @@
 sentry:
-    dsn: '%env(COMMIT_ID)%'
+    dsn: '%env(SENTRY_DSN)%'
 
     options:
         excluded_exceptions:
