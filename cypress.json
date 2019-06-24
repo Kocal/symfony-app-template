@@ -1,4 +1,11 @@
 {
+  "fixturesFolder": "tests/cypress/fixtures",
+  "integrationFolder": "tests/cypress/integration",
+  "pluginsFile": "tests/cypress/plugins/index.js",
+  "screenshotsFolder": "tests/cypress/screenshots",
+  "videosFolder": "tests/cypress/videos",
+  "supportFile": "tests/cypress/support/index.js",
+
   "baseUrl": "http://symfony-app-template.vm:8000",
   "chromeWebSecurity": false,
   "viewportWidth": 1280,
