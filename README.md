@@ -17,7 +17,6 @@
 - Un wrapper Vagrant
 - Sentry (PHP et JS) configuré
 - Travis configuré
-- Scrutinizer configuré
 
 ## Utiliser ce template
 
