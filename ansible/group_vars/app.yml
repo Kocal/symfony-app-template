@@ -14,7 +14,7 @@ app_options:
     mysql_version: '5.7'
     mongodb: false
     mongodb_version: '3.2'
-    mariadb: true
+    mariadb: false
     mariadb_version: '10.3'
     postgresql: false
     elasticsearch: false
