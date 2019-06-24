@@ -7,8 +7,7 @@ php:
 env:
     global:
         - TZ=Europe/Paris
-        
-        # If using PostgreSQL (uncomment)
+        - PGPORT=5433
         - DATABASE_URL=pgsql://postgres@127.0.0.1:5433/symfony_app_template_test
         - DATABASE_SERVER_VERSION=11.3
 
