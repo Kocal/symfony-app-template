@@ -1,0 +1,4 @@
+suites:
+    default:
+        spec_prefix: 'phpspec'
+        spec_path: 'tests/'

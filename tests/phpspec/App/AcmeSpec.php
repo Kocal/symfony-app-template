@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\App;
+namespace phpspec\App;
 
 use App\Acme;
 use PhpSpec\ObjectBehavior;
