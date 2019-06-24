@@ -1,6 +1,10 @@
 default:
+    autoload:
+        '': '%paths.base%/tests/behat/bootstrap'
+
     suites:
         default:
+            paths: ['%paths.base%/tests/behat']
             contexts:
                 - Behat\MinkExtension\Context\MinkContext
                 - behatch:context:json
@@ -9,7 +13,7 @@ default:
     extensions:
         Behat\Symfony2Extension:
             kernel:
-                bootstrap: features/bootstrap/bootstrap.php
+                bootstrap: tests/behat/bootstrap/bootstrap.php
                 class: App\Kernel
 
         Behat\MinkExtension:

@@ -9,6 +9,6 @@ module.exports = {
   moduleNameMapper: {
     '^@app/(.*)$': '<rootDir>/assets/app/$1',
   },
-  testMatch: ['<rootDir>/jest/**/*.test.(js|jsx|ts|tsx)'],
+  testMatch: ['<rootDir>/tests/jest/**/*.test.(js|jsx|ts|tsx)'],
   snapshotSerializers: ["jest-serializer-vue"]
 };

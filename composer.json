@@ -78,8 +78,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "App\\Tests\\": "tests/",
-      "Features\\": "features/bootstrap/"
+      "App\\Tests\\": "tests/phpunit",
+      "Features\\": "tests/behat/bootstrap/"
     }
   },
   "replace": {
