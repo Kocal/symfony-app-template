@@ -3,15 +3,6 @@
   "type": "project",
   "license": "proprietary",
   "description": "A skeleton to start a new Symfony website",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://repo.packagist.com/yproximite/"
-    },
-    {
-      "packagist.org": false
-    }
-  ],
   "require": {
     "php": "^7.3",
     "ext-ctype": "*",
