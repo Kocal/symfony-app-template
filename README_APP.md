@@ -1,7 +1,6 @@
 # App Name
 
 [![Build Status](https://travis-ci.com/Yproximite/symfony-app-template.svg)](https://travis-ci.com/Yproximite/symfony-app-template)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Yproximite/symfony-app-template/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Yproximite/symfony-app-template/?branch=master)
 
 **Accès :**
 
@@ -56,7 +55,7 @@ Depuis le dossier racine du projet, faire:
 
 ## Outils locaux
 
-- [phpMyAdmin](http://symfony-app-template.vm:1979/)
+- [phpPgAdmin](http://symfony-app-template.vm:1980/)
 - [phpRedisAdmin](http://symfony-app-template.vm:1981/)
 - [MailHog](http://symfony-app-template.vm:8025/)
 - [OPCache Dashboard](http://symfony-app-template.vm:2013/)
