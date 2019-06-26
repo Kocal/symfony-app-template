@@ -16,7 +16,8 @@ app_options:
     mongodb_version: '3.2'
     mariadb: false
     mariadb_version: '10.3'
-    postgresql: false
+    postgresql: true
+    postgresql_version: '10'
     elasticsearch: false
     elasticsearch_version: '6'
     redis: true

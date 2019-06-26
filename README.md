@@ -5,7 +5,7 @@
 - Une VM configurée aux petits oignons
 - PHP 7.3
 - NodeJS 10
-- PostgreSQL 11
+- PostgreSQL 10
 - Redis
 - Symfony 4.3.1
 - Doctrine extensions & Fixtures
