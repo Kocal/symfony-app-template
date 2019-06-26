@@ -1,14 +1,14 @@
 # App Name
 
-[![Build Status](https://travis-ci.com/Yproximite/symfony-app-template.svg)](https://travis-ci.com/Yproximite/symfony-app-template)
+[![Build Status](https://travis-ci.com/Kocal/symfony-app-template.svg?branch=master)](https://travis-ci.com/Kocal/symfony-app-template)
 
-**Accès :**
+**Access:**
 
-- Local : http://symfony-app-template.vm
-- Local (dev) : http://symfony-app-template.vm:8000
-- Local (prod) : http://symfony-app-template.vm:8001
-- Pre-Prod : https://demo.symfony-app-template.fr
-- Prod : https://symfony-app-template.fr
+- Local: http://symfony-app-template.vm
+- Local (dev env) : http://symfony-app-template.vm:8000
+- Local (prod env) : http://symfony-app-template.vm:8001
+- Pre-Prod: https://demo.symfony-app-template.fr
+- Prod: https://symfony-app-template.fr
 
 ## Requirements
 
@@ -21,39 +21,52 @@
 
 ### Prod
 
-...
+- PHP 7.3
+- PostgreSQL 10
+- Node.js and Yarn
 
-## Lancer pour la première fois la VM
+## Run the Virtual Machine for the first time
 
-Depuis le dossier racine du projet, faire:
+From the project root, run:
 
-    $ make setup
-    $ vagrant ssh
-    $ make install-app
+```bash
+$ make setup
+$ vagrant ssh
+# in the VM
+$ make install-app
+```
 
-## Opérations de maintenance
+## Maintenance operations
 
-### Démarrer la VM
+### Run the VM
 
-    # à executer en dehors de la VM
-    $ vagrant up
+```bash
+# to run outside the VM
+$ vagrant up
+```
 
-### Se connecter à la VM
+### Connect to the VM
 
-    # à executer en dehors de la VM
-    $ vagrant ssh
+```bash
+# to run outside the VM
+$ vagrant ssh
+```
 
-### Re-synchroniser l'application après changement de branche
+### Re-sync the app (when changing git branch)
 
-    # à executer dans la VM
-    $ make install-app
+```bash
+# to run inside the VM
+$ make install-app
+```
 
-### Mettre à jour la VM
+### Update the VM
 
-    # à executer en dehors de la VM
-    $ make update
+```bash
+# to run outside the VM
+$ make update
+```
 
-## Outils locaux
+## Local tools
 
 - [phpPgAdmin](http://symfony-app-template.vm:1980/)
 - [phpRedisAdmin](http://symfony-app-template.vm:1981/)
