@@ -5,7 +5,7 @@
 ## Functionnalities
 
 - A Virtual Machine with PHP 7.3, NodeJS 10, PostgreSQL 10, Redis
-- Symfony 4.3 for web app
+- Symfony 4.3 for web app (`var/cache` and `var/log` directories are cached into the VM to prevent degradation of performance)
 - Doctrine Extensions & Fixtures
 - API Platform & API key authentication
 - Webpack Encore with Vue/JSX support
