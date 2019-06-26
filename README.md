@@ -19,7 +19,7 @@
 - Stylelint
 - Prettier
 
-### Testing tools
+### Testing tools
 
 - PHPUnit, for unit tests (PHP)
 - phpspec, for spec tests (PHP)
@@ -27,7 +27,7 @@
 - Jest (with Vue & JSX support), for unit tests (JS)
 - Cypress, for functionnal/E2E tests (JS, in the browser)
 
-### Misc
+### Misc
 
 - A pre-commit hook to prettify `.php`, `.js(x)`, `.vue`, `.json`, `.y(a)ml`, and `.md` files
 - A Vagrant wrapper to ensure commands are run in the VM (e.g.: `./vagrant-wrapper sf clear:cache` inside or outside the VM)
