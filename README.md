@@ -5,7 +5,7 @@
 - Une VM configurée aux petits oignons
 - PHP 7.3
 - NodeJS 10
-- MariaDB 13 (installé et configuré) et PostgreSQL 10 (nécessite de dé-commenter certaines parties du code)
+- PostgreSQL 10
 - Redis
 - Symfony 4.3.1
 - Doctrine extensions & Fixtures

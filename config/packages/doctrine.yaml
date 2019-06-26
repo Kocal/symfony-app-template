@@ -1,14 +1,13 @@
 doctrine:
     dbal:
         # configure these for your database server
-        driver: '%env(string:DATABASE_DRIVER)%'
-        server_version: '%env(string:DATABASE_SERVER_VERSION)%'
-        charset: utf8mb4
-        default_table_options:
-            charset: utf8mb4
-            collate: utf8mb4_unicode_ci
-
+        driver: 'pdo_pgsql'
+        server_version: '10'
         url: '%env(resolve:DATABASE_URL)%'
+        charset: utf8
+        default_table_options:
+            charset: utf8
+            collate: utf8_unicode_ci
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore

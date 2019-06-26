@@ -7,14 +7,7 @@ php:
 env:
     global:
         - TZ=Europe/Paris
-
-        # If using MariaDB
-        - DATABASE_URL=mysql://travis@127.0.0.1:3306/symfony_app_template_test
-        - DATABASE_SERVER_VERSION=mariadb-10.3.14
-
-        # If using PostgreSQL (uncomment)
-        #- DATABASE_URL=pgsql://postgres@127.0.0.1:5433/symfony_app_template_test
-        #- DATABASE_SERVER_VERSION=11.3
+        - DATABASE_URL=pgsql://postgres@127.0.0.1:5432/symfony_app_template_test
 
 cache:
     yarn: true
@@ -29,12 +22,10 @@ notifications:
     email: false
 
 addons:
-    mariadb: '10.3'
-    #postgresql: '11'
-    apt:
-        packages:
-            #- postgresql-11
-            #- postgresql-client-11
+    postgresql: '10'
+    packages:
+      - postgresql-10
+      - postgresql-client-10
     hosts:
         - symfony-app-template.vm
         - www.symfony-app-template.vm
@@ -62,9 +53,9 @@ jobs:
 
 before_install:
     # PostgreSQL
-    #- sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
-    #- sudo service postgresql restart
-    #- sleep 1
+    - sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf # see https://github.com/travis-ci/travis-ci/issues/9624
+    - sudo service postgresql restart
+    - sleep 1
 
     # PHP
     - phpenv config-rm xdebug.ini || echo "xdebug not available"

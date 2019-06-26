@@ -14,4 +14,3 @@
           - app_(\w*)_patterns
   roles:
       - manala.skeleton
-      #- ANXS.postgresql

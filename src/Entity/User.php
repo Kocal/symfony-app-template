@@ -8,6 +8,7 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
+ * @ORM\Table(name="app_user")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @ApiResource(
  *    itemOperations={"get"},
