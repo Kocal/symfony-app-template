@@ -23,11 +23,12 @@ notifications:
 
 addons:
     postgresql: '10'
-    packages:
-        - postgresql-10
-        - postgresql-client-10
-        # Cypress
-        - libgconf-2-4
+    apt:
+        packages:
+            - postgresql-10
+            - postgresql-client-10
+            # Cypress
+            - libgconf-2-4
     hosts:
         - symfony-app-template.vm
         - www.symfony-app-template.vm
