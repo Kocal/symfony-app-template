@@ -37,6 +37,7 @@
 ## Use this template
 
 - Click on the green button `Use this template`
+- While this is not fixed, you have to run `chmod +x vagrant-wrapper.sh bin/*` to make those files executable (see https://twitter.com/HugoAlliaume/status/1148213252305903616)
 - Edit the file `README_APP.md` :
   - Update Travis badge
   - Update access links to the app
