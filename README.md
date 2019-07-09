@@ -41,5 +41,5 @@
 - Edit the file `README_APP.md` :
   - Update Travis badge
   - Update access links to the app
-- Update occurences of `symfony-app-template`, `SymfonyAppTemplate`, ...by your app name
+- Update occurrences of `symfony-app-template`, `SymfonyAppTemplate`, ...by your app name
 - Replace file `README.md` by the file `README_APP.md`
