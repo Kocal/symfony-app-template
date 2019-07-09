@@ -27,7 +27,7 @@ addons:
         packages:
             - postgresql-10
             - postgresql-client-10
-            # Cypress
+            # Cypress
             - libgconf-2-4
     hosts:
         - symfony-app-template.vm
@@ -86,12 +86,12 @@ script:
     - bin/console lint:twig templates
     - bin/console lint:yaml config --parse-tags
 
-    - bin/php-cs-fixer fix --verbose --diff --dry-run src/
+    - bin/php-cs-fixer.phar fix --verbose --diff --dry-run src/
     - APP_ENV=test bin/console doctrine:schema:validate
 
     - yarn lint:js --no-fix
     - yarn lint:css --no-fix
 
-    - php bin/phpstan analyse src/
+    - php bin/phpstan.phar analyse src/
     - php bin/simple-phpunit
     - php bin/phpspec run
