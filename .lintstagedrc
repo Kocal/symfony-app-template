@@ -2,8 +2,8 @@
   "relative": true,
   "linters": {
     "*.php": [
-      "./vagrant-wrapper.sh php bin/php-cs-fixer fix --config .php_cs.dist --diff",
-      "./vagrant-wrapper.sh php bin/phpstan analyse --level 7 --no-ansi --no-progress",
+      "./vagrant-wrapper.sh php bin/php-cs-fixer.phar fix --config .php_cs.dist --diff",
+      "./vagrant-wrapper.sh php bin/phpstan.phar analyse --level 7 --no-ansi --no-progress",
       "git add"
     ],
     "{assets,cypress}/**/*.{js,jsx,vue}": [

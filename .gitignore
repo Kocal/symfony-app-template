@@ -21,8 +21,7 @@
 /bin/*
 !/bin/.gitkeep
 !/bin/console
-!/bin/php-cs-fixer*
-!/bin/security-checker*
+!/bin/*.phar
 /public/bundles/
 /var/*
 !/var/.gitkeep
