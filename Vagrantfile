@@ -4,7 +4,7 @@
 app = {
   :name        => 'symfony-app-template',
   :box         => 'manala/app-dev-debian',
-  :box_version => '~> 4.0.4',
+  :box_version => '~> 4.0.5',
   :box_memory  => 4096
 }
 
