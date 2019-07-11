@@ -4,7 +4,8 @@
 # Ansible
 /ansible/*.retry
 /ansible/group_vars/*_local.yml
-/ansible/roles/*
+/ansible/roles/.downloads
+/ansible/roles/manala.*
 !ansible/roles/.gitkeep
 
 # PHP-CS-Fixer
