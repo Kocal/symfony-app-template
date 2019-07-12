@@ -28,7 +28,7 @@
     "@yproximite/eslint-config-yprox": "^1.2.8",
     "@yproximite/stylelint-config-wordpress": "^1.1.0",
     "autoprefixer": "^9.6.0",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.2",
     "babel-jest": "^24.8.0",
     "core-js": "^3.0.0",
     "cypress": "^3.3.1",
