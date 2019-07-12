@@ -1326,14 +1326,14 @@
   resolved "https://registry.yarnpkg.com/@yproximite/eslint-config-base/-/eslint-config-base-1.0.3.tgz#d914f7defbf326297c850462ad358136eb5ddae6"
   integrity sha512-XyQ66PekX8QJSMrHFHZnFmEx/wFjQp5tFO0Y2WmPJ9YkWqf1IvELHA8SLASNdAhQFc/Hktbe6ELlIsCzjnz+Ow==
 
-"@yproximite/eslint-config-yprox@^1.2.8":
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/@yproximite/eslint-config-yprox/-/eslint-config-yprox-1.2.8.tgz#0cda13b55590cd3356f94a7dcd6461f73efb9c01"
-  integrity sha512-YZdQuxW1uik+AF4cAjeC76tsvEZvKtDkktYVswR2IrVojgNPLgTlIZPgXlSwRRfzjzkSuAdbKjjg1/QoNysnJw==
+"@yproximite/eslint-config-yprox@^1.2.13":
+  version "1.2.13"
+  resolved "https://registry.yarnpkg.com/@yproximite/eslint-config-yprox/-/eslint-config-yprox-1.2.13.tgz#a8b6728a9faf14842ecd8940a9cace7464a37b41"
+  integrity sha512-bjeh6rImCeeckDYy6yN5p37khGir8osJHnR9MVBkkYQ4STC7X71PBfXZ8Yc82u+gv1q1M9iZQ0tCtJbvpuYXgw==
   dependencies:
     "@yproximite/eslint-config-base" "^1.0.2"
     eslint-config-airbnb-base "^13.1.0"
-    eslint-config-prettier "^4.0.0"
+    eslint-config-prettier "^6.0.0"
     eslint-plugin-import "^2.14.0"
     eslint-plugin-prettier "^3.0.0"
     eslint-plugin-vue "^5.0.0"
@@ -3526,10 +3526,10 @@ eslint-config-airbnb-base@^13.1.0:
     object.assign "^4.1.0"
     object.entries "^1.0.4"
 
-eslint-config-prettier@^4.0.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-4.3.0.tgz#c55c1fcac8ce4518aeb77906984e134d9eb5a4f0"
-  integrity sha512-sZwhSTHVVz78+kYD3t5pCWSYEdVSBR0PXnwjDRsUs8ytIrK8PLXw+6FKp8r3Z7rx4ZszdetWlXYKOHoUrrwPlA==
+eslint-config-prettier@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.0.0.tgz#f429a53bde9fc7660e6353910fd996d6284d3c25"
+  integrity sha512-vDrcCFE3+2ixNT5H83g28bO/uYAwibJxerXPj+E7op4qzBCsAV36QfvdAyVOoNxKAH2Os/e01T/2x++V0LPukA==
   dependencies:
     get-stdin "^6.0.0"
 
