@@ -4798,7 +4798,7 @@
         },
         {
             "name": "symfony/expression-language",
-            "version": "v4.3.1",
+            "version": "v4.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/expression-language.git",
