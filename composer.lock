@@ -7437,7 +7437,7 @@
         },
         {
             "name": "symfony/web-link",
-            "version": "v4.3.1",
+            "version": "v4.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/web-link.git",
@@ -8111,12 +8111,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/Mink.git",
-                "reference": "7f7af8fc7649c4f74935ddd1a1fa82e205eeb25e"
+                "reference": "a534fe7dac9525e8e10ca68e737c3d7e5058ec83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/Mink/zipball/7f7af8fc7649c4f74935ddd1a1fa82e205eeb25e",
-                "reference": "7f7af8fc7649c4f74935ddd1a1fa82e205eeb25e",
+                "url": "https://api.github.com/repos/minkphp/Mink/zipball/a534fe7dac9525e8e10ca68e737c3d7e5058ec83",
+                "reference": "a534fe7dac9525e8e10ca68e737c3d7e5058ec83",
                 "shasum": ""
             },
             "require": {
@@ -8124,7 +8124,7 @@
                 "symfony/css-selector": "^2.7|^3.0|^4.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^3.3|^4.0"
+                "symfony/phpunit-bridge": "^4.2"
             },
             "suggest": {
                 "behat/mink-browserkit-driver": "extremely fast headless driver for Symfony\\Kernel-based apps (Sf2, Silex)",
@@ -8162,7 +8162,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2019-07-08T10:19:23+00:00"
+            "time": "2019-07-15T12:45:29+00:00"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -9787,12 +9787,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "f6a4edb3f8bd57599080de94469cebb6b67a83d1"
+                "reference": "4b689109edae80be6598a434e50276f8695dc116"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/f6a4edb3f8bd57599080de94469cebb6b67a83d1",
-                "reference": "f6a4edb3f8bd57599080de94469cebb6b67a83d1",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/4b689109edae80be6598a434e50276f8695dc116",
+                "reference": "4b689109edae80be6598a434e50276f8695dc116",
                 "shasum": ""
             },
             "require": {
@@ -9847,7 +9847,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2019-07-09T22:23:37+00:00"
+            "time": "2019-07-17T11:45:49+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
