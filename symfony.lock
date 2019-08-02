@@ -31,22 +31,6 @@
     "behat/mink-extension": {
         "version": "2.3.1"
     },
-    "behat/symfony2-extension": {
-        "version": "2.1",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "2.1",
-            "ref": "ff944fc5f8dc1d1c9602968c2c12646c557adbbc"
-        },
-        "files": [
-            "behat.yml.dist",
-            "config/bootstrap.php",
-            "features/bootstrap/FeatureContext.php",
-            "features/bootstrap/bootstrap.php",
-            "features/demo.feature"
-        ]
-    },
     "behat/transliterator": {
         "version": "v1.2.0"
     },
@@ -158,6 +142,21 @@
     },
     "fig/link-util": {
         "version": "1.0.0"
+    },
+    "friends-of-behat/symfony-extension": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "3d21344765fd3440a85bdd27d4cada186ec628bd"
+        },
+        "files": [
+            "behat.yml.dist",
+            "config/services_test.yaml",
+            "features/demo.feature",
+            "tests/Behat/DemoContext.php"
+        ]
     },
     "fzaninotto/faker": {
         "version": "v1.8.0"
@@ -439,9 +438,6 @@
             "config/bootstrap.php"
         ]
     },
-    "symfony/contracts": {
-        "version": "v1.1.0"
-    },
     "symfony/css-selector": {
         "version": "v4.3.1"
     },
@@ -619,6 +615,9 @@
     },
     "symfony/property-info": {
         "version": "v4.3.1"
+    },
+    "symfony/proxy-manager-bridge": {
+        "version": "v4.3.3"
     },
     "symfony/routing": {
         "version": "4.2",

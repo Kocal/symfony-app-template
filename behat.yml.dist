@@ -11,15 +11,12 @@ default:
                 - Features\ExtendedBehatchRestContext
 
     extensions:
-        Behat\Symfony2Extension:
-            kernel:
-                bootstrap: tests/behat/bootstrap/bootstrap.php
-                class: App\Kernel
+        FriendsOfBehat\SymfonyExtension: ~
 
         Behat\MinkExtension:
              base_url: "http://symfony-app-template.com/"
              sessions:
-               default:
-                 symfony2: ~
+               symfony:
+                 symfony: ~
 
         Behatch\Extension: ~
