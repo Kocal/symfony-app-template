@@ -20,9 +20,9 @@
 /.env.local.php
 /.env.*.local
 /bin/*
-!/bin/.gitkeep
 !/bin/console
-!/bin/*.phar
+!/bin/php-cs-fixer.phar
+!/bin/security-checker.phar
 /public/bundles/
 /var/*
 !/var/.gitkeep
@@ -45,6 +45,6 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
-###> behat/symfony2-extension ###
-behat.yml
-###< behat/symfony2-extension ###
+###> friends-of-behat/symfony-extension ###
+/behat.yml
+###< friends-of-behat/symfony-extension ###

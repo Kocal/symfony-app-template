@@ -8,18 +8,15 @@ default:
             contexts:
                 - Behat\MinkExtension\Context\MinkContext
                 - behatch:context:json
-                - Features\ExtendedBehatchRestContext
+                - App\Tests\Behat\ExtendedBehatchRestContext
 
     extensions:
-        Behat\Symfony2Extension:
-            kernel:
-                bootstrap: tests/behat/bootstrap/bootstrap.php
-                class: App\Kernel
+        FriendsOfBehat\SymfonyExtension: ~
 
         Behat\MinkExtension:
              base_url: "http://symfony-app-template.com/"
              sessions:
-               default:
-                 symfony2: ~
+               symfony:
+                 symfony: ~
 
         Behatch\Extension: ~
