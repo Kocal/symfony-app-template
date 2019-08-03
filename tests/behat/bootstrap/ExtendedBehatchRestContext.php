@@ -1,6 +1,8 @@
 <?php
 
-namespace Features;
+declare(strict_types=1);
+
+namespace App\Tests\Behat;
 
 use Behatch\Context\RestContext;
 

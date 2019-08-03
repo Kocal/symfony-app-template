@@ -70,7 +70,7 @@
   "autoload-dev": {
     "psr-4": {
       "App\\Tests\\": "tests/phpunit",
-      "Features\\": "tests/behat/bootstrap/"
+      "App\\Tests\\Behat\\": "tests/behat/bootstrap/"
     }
   },
   "replace": {

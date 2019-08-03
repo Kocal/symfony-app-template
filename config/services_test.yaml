@@ -4,4 +4,4 @@ services:
         autoconfigure: true
 
     App\Tests\Behat\:
-        resource: '../tests/Behat/*'
+        resource: '../tests/behat/*'

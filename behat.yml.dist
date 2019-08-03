@@ -8,7 +8,7 @@ default:
             contexts:
                 - Behat\MinkExtension\Context\MinkContext
                 - behatch:context:json
-                - Features\ExtendedBehatchRestContext
+                - App\Tests\ExtendedBehatchRestContext
 
     extensions:
         FriendsOfBehat\SymfonyExtension: ~
