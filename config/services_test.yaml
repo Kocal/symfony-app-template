@@ -4,4 +4,7 @@ services:
         autoconfigure: true
 
     App\Tests\Behat\:
-        resource: '../tests/behat/*'
+        resource: '../tests/behat/bootstrap/*'
+
+    App\Tests\Behat\ExtendedBehatchRestContext:
+        autoconfigure: false
