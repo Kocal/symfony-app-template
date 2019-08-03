@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="fr" trgLang="fr">
+  <file id="date.fr">
+    <unit id="BJMjkzc" name="diff.ago.year">
+      <segment>
+        <source>diff.ago.year</source>
+        <target>il y a 1 an|il y a %count% ans</target>
+      </segment>
+    </unit>
+    <unit id="QlOaaz7" name="diff.ago.month">
+      <segment>
+        <source>diff.ago.month</source>
+        <target>il y a 1 mois|il y a %count% mois</target>
+      </segment>
+    </unit>
+    <unit id="0icjxey" name="diff.ago.day">
+      <segment>
+        <source>diff.ago.day</source>
+        <target>il y a 1 jour|il y a %count% jours</target>
+      </segment>
+    </unit>
+    <unit id="Qb4ReOq" name="diff.ago.hour">
+      <segment>
+        <source>diff.ago.hour</source>
+        <target>il y a 1 heure|il y a %count% heures</target>
+      </segment>
+    </unit>
+    <unit id="ildUKt_" name="diff.ago.minute">
+      <segment>
+        <source>diff.ago.minute</source>
+        <target>il y a 1 minute|il y a %count% minutes</target>
+      </segment>
+    </unit>
+    <unit id="UQtErIZ" name="diff.ago.second">
+      <segment>
+        <source>diff.ago.second</source>
+        <target>il y a 1 seconde|il y a %count% secondes</target>
+      </segment>
+    </unit>
+    <unit id="M4RAXb_" name="diff.empty">
+      <segment>
+        <source>diff.empty</source>
+        <target>maintenant</target>
+      </segment>
+    </unit>
+    <unit id="VgQkGkv" name="diff.in.second">
+      <segment>
+        <source>diff.in.second</source>
+        <target>dans 1 seconde|dans %count% secondes</target>
+      </segment>
+    </unit>
+    <unit id="dJQGobP" name="diff.in.hour">
+      <segment>
+        <source>diff.in.hour</source>
+        <target>dans 1 heure|dans %count% heures</target>
+      </segment>
+    </unit>
+    <unit id="AFqulYH" name="diff.in.minute">
+      <segment>
+        <source>diff.in.minute</source>
+        <target>dans 1 minute|dans %count% minutes</target>
+      </segment>
+    </unit>
+    <unit id="vKk2WhV" name="diff.in.day">
+      <segment>
+        <source>diff.in.day</source>
+        <target>dans 1 jour|dans %count% jours</target>
+      </segment>
+    </unit>
+    <unit id="INy1OSI" name="diff.in.month">
+      <segment>
+        <source>diff.in.month</source>
+        <target>dans 1 mois|dans %count% mois</target>
+      </segment>
+    </unit>
+    <unit id="Zy1_IlC" name="diff.in.year">
+      <segment>
+        <source>diff.in.year</source>
+        <target>dans 1 an|dans %count% ans</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>
