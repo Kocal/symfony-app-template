@@ -34,7 +34,8 @@
     "symfony/validator": "*",
     "symfony/web-link": "*",
     "symfony/webpack-encore-bundle": "^1.6",
-    "symfony/yaml": "*"
+    "symfony/yaml": "*",
+    "twig/extensions": "^1.5"
   },
   "require-dev": {
     "behat/behat": "^3.5",
