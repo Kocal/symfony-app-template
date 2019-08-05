@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa46979c5f7de5670fead1b829c5ff7c",
+    "content-hash": "f5bc99b0f333e9bfac386f14393c6215",
     "packages": [
         {
             "name": "api-platform/api-pack",
@@ -35,7 +35,7 @@
                 "symfony/validator": "*"
             },
             "type": "symfony-pack",
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -218,7 +218,7 @@
                     "Behat\\Transliterator": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Artistic-1.0"
             ],
@@ -259,7 +259,7 @@
                     "src/functions_include.php"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1636,7 +1636,7 @@
                     "Gedmo\\": "lib/Gedmo"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1775,7 +1775,7 @@
                     "Http\\Factory\\Guzzle\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1876,7 +1876,7 @@
                     "Jean85\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2009,7 +2009,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2058,7 +2058,7 @@
                     "Nyholm\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2176,7 +2176,7 @@
                     "ProxyManager\\": "src"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2244,7 +2244,7 @@
                     "Http\\Client\\Common\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2309,7 +2309,7 @@
                     "Http\\Client\\Curl\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2428,7 +2428,7 @@
                     "Http\\Client\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2503,7 +2503,7 @@
                     "src/filters.php"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2551,7 +2551,7 @@
                     "Http\\Message\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2601,7 +2601,7 @@
                     "Http\\Promise\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2648,7 +2648,7 @@
                     "Translation\\Common\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2699,7 +2699,7 @@
                     "Translation\\Extractor\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2770,7 +2770,7 @@
                     "Translation\\Bundle\\": ""
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2817,7 +2817,7 @@
                     "Translation\\SymfonyStorage\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3019,7 +3019,7 @@
                     "bootstrap.php"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3056,7 +3056,7 @@
                     "Predis\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3200,7 +3200,7 @@
                     "Psr\\Http\\Client\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3249,7 +3249,7 @@
                     "Psr\\Http\\Message\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3300,7 +3300,7 @@
                     "Psr\\Http\\Message\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3512,7 +3512,7 @@
                     "Ramsey\\Uuid\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3633,7 +3633,7 @@
                 "sentry/sentry": "^2.0.1"
             },
             "type": "metapackage",
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3702,7 +3702,7 @@
                     "Sentry\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -3799,29 +3799,37 @@
         },
         {
             "name": "snc/redis-bundle",
-            "version": "2.1.9",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/snc/SncRedisBundle.git",
-                "reference": "af3ac967b0351ff880f646486bff87247abb5286"
+                "reference": "ff2a3aa6e9933f0347e9fea0ffa367643d779c5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/snc/SncRedisBundle/zipball/af3ac967b0351ff880f646486bff87247abb5286",
-                "reference": "af3ac967b0351ff880f646486bff87247abb5286",
+                "url": "https://api.github.com/repos/snc/SncRedisBundle/zipball/ff2a3aa6e9933f0347e9fea0ffa367643d779c5c",
+                "reference": "ff2a3aa6e9933f0347e9fea0ffa367643d779c5c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
-                "symfony/framework-bundle": "^2.7 || ^3.0 || ^4.0",
-                "symfony/yaml": "^2.7 || ^3.0 || ^4.0"
+                "php": "^7.1.3",
+                "symfony/framework-bundle": "^3.4 || ^4.0",
+                "symfony/http-foundation": "^3.4 || ^4.0",
+                "symfony/yaml": "^3.4 || ^4.0"
             },
             "require-dev": {
-                "doctrine/cache": "1.*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
-                "predis/predis": "^1.0",
-                "symfony/console": "^2.7 || ^3.0 || ^4.0",
-                "symfony/phpunit-bridge": "^2.7 || ^3.0 || ^4.0"
+                "doctrine/doctrine-bundle": "^1.6.10",
+                "doctrine/orm": "^2.5.11",
+                "ext-pdo_sqlite": "*",
+                "phpunit/phpunit": "^6.2 || ^7.1",
+                "predis/predis": "^1.1",
+                "swiftmailer/swiftmailer": "^6.0",
+                "symfony/browser-kit": "^3.4 || ^4.0",
+                "symfony/console": "^3.4 || ^4.0",
+                "symfony/phpunit-bridge": "^3.4 || ^4.0",
+                "symfony/profiler-pack": "^1.0",
+                "symfony/swiftmailer-bundle": "^2.0 || ^3.0",
+                "symfony/twig-bundle": "^3.4 || ^4.0"
             },
             "suggest": {
                 "monolog/monolog": "If you want to use the monolog redis handler.",
@@ -3832,15 +3840,18 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Snc\\RedisBundle\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3861,7 +3872,7 @@
                 "redis",
                 "symfony"
             ],
-            "time": "2019-02-20T07:03:43+00:00"
+            "time": "2019-08-01T05:51:05+00:00"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
@@ -3901,7 +3912,7 @@
                     "Stof\\DoctrineExtensionsBundle\\": ""
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -7726,19 +7737,19 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
+                    "role": "Lead Developer",
                     "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "homepage": "http://fabien.potencier.org"
                 },
                 {
                     "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com",
-                    "role": "Project Founder"
+                    "role": "Project Founder",
+                    "email": "armin.ronacher@active-4.com"
                 },
                 {
                     "name": "Twig Team",
-                    "homepage": "https://twig.symfony.com/contributors",
-                    "role": "Contributors"
+                    "role": "Contributors",
+                    "homepage": "https://twig.symfony.com/contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -7830,7 +7841,7 @@
                     "Negotiation\\": "src/Negotiation"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8075,7 +8086,7 @@
                     "Behat\\Testwork": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8140,7 +8151,7 @@
                     "Behat\\Gherkin": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8257,7 +8268,7 @@
                     "Behat\\Mink\\Driver\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8313,7 +8324,7 @@
                     "Behat\\MinkExtension": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8381,7 +8392,7 @@
                     "Behatch\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "beerware"
             ],
@@ -8417,7 +8428,7 @@
                     "Interop\\Container\\": "src/Interop/Container/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8468,7 +8479,7 @@
                     "Doctrine\\Common\\DataFixtures\\": "lib/Doctrine/Common/DataFixtures"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8628,7 +8639,7 @@
                     "Faker\\": "src/Faker/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8688,7 +8699,7 @@
                     "Hautelook\\AliceBundle\\": "src"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8749,7 +8760,7 @@
                     "JsonSchema\\": "src/JsonSchema/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8813,7 +8824,7 @@
                     "src/DeepCopy/deep_copy.php"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8880,7 +8891,7 @@
                     "Nelmio\\Alice\\": "src"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8894,7 +8905,7 @@
                     "email": "shelburt02@gmail.com"
                 },
                 {
-                    "name": "Théo FIDRY",
+                    "name": "Théo Fidry",
                     "email": "theo.fidry@gmail.com"
                 }
             ],
@@ -8932,7 +8943,7 @@
                     "Diff": "lib/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8994,7 +9005,7 @@
                     "PhpSpec": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9062,7 +9073,7 @@
                     "Prophecy\\": "src/Prophecy"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9146,7 +9157,7 @@
                     "PHPStan\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9197,7 +9208,7 @@
                     "PHPStan\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9259,7 +9270,7 @@
                     "PHPStan\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9306,7 +9317,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -9369,7 +9380,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -9426,7 +9437,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -9491,7 +9502,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -9554,7 +9565,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9610,7 +9621,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9659,7 +9670,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9820,7 +9831,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -10314,7 +10325,7 @@
                     "Fidry\\AliceDataFixtures\\": "src"
                 }
             },
-            "notification-url": "https://repo.packagist.com/yproximite/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
