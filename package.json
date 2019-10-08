@@ -27,7 +27,7 @@
     "@vue/test-utils": "^1.0.0-beta.29",
     "@yproximite/eslint-config-yprox": "^1.2.21",
     "@yproximite/stylelint-config-wordpress": "^1.1.0",
-    "autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.6.4",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "core-js": "^3.2.1",
