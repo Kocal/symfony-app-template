@@ -23,7 +23,7 @@
   "devDependencies": {
     "@symfony/webpack-encore": "^0.28.0",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
-    "@vue/babel-preset-jsx": "^1.1.0",
+    "@vue/babel-preset-jsx": "^1.1.1",
     "@vue/test-utils": "^1.0.0-beta.29",
     "@yproximite/eslint-config-yprox": "^1.2.21",
     "@yproximite/stylelint-config-wordpress": "^1.1.0",
