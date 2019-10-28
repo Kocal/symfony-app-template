@@ -53,7 +53,7 @@
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "@sentry/browser": "^5.7.0",
+    "@sentry/browser": "^5.7.1",
     "@sentry/integrations": "^5.7.0",
     "date-fns": "^2.6.0",
     "jquery": "^3.4.1",
