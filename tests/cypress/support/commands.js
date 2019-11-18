@@ -22,7 +22,6 @@ Cypress.Commands.add('reloadDatabase', () => {
 // -- This is a parent command --
 Cypress.Commands.add('bootstrapApp', () => {
   cy.reloadDatabase();
-  cy.execVagrant('bin/console cache:warmup');
 
   // Make sure we clear and whitelist the auth cookie
   cy.clearCookie('MOCKSESSID');

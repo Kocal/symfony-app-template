@@ -40,6 +40,7 @@ _cypress_job: &_cypress_job
     before_script:
         - make install-app@test
         - composer dump-autoload --optimize --classmap-authoritative
+        - bin/console cache:warmup
         - yarn cypress install
         - APP_ENV=test php bin/console server:start
     after_script:
