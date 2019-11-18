@@ -5,6 +5,8 @@ includes:
 parameters:
     level: max
 
+    inferPrivatePropertyTypeFromConstructor: true
+
     symfony:
         container_xml_path: %rootDir%/../../../var/cache/dev/srcApp_KernelDevDebugContainer.xml
 
