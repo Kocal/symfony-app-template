@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Api;
 
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,6 +17,9 @@ class SecurityController extends AbstractController
     public function login(): JsonResponse
     {
         $user = $this->getUser();
+        if (!$user instanceof User) {
+            throw new \RuntimeException('Unable to fetch current user.');
+        }
 
         return new JsonResponse([
             'apiKey' => $user->getApiKey(),
