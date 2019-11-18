@@ -36,23 +36,29 @@ addons:
 stages:
     - test
 
+_cypress_job: &_cypress_job
+    before_script:
+        - make install-app@test
+        - composer dump-autoload --optimize --classmap-authoritative
+        - yarn cypress install
+        - APP_ENV=test php bin/console server:start
+    after_script:
+        - APP_ENV=test php bin/console server:stop
+
 jobs:
     include:
         - stage: test
-          name: Linting files, running basic tests (PHPStan, PHPUnit, phpspec, behat)s
-        - name: End-to-end tests
-          if: type = pull_request
+          name: Linting files, running basic tests (PHPStan, PHPUnit, phpspec), and Behat
+        - name: Cypress
+          <<: *_cypress_job
+          if: type = pull_request AND head_branch !~ /^dependabot/
           script:
-              - make install-app@test
-
-              # Cypress
-              - bin/behat --format progress
-
-              # Cypress
-              - APP_ENV=test php bin/console server:start
-              - yarn cypress install
-              - yarn cypress run --config video=false
-              - APP_ENV=test php bin/console server:stop
+              - CI_BUILD_ID=$(head -200 /dev/urandom | cksum | cut -f1 -d " ")
+              - yarn cypress run --record --ci-build-id $CI_BUILD_ID
+        - name: Cypress for Dependabot
+          <<: *_cypress_job
+          if: type = pull_request AND head_branch =~ /^dependabot/
+          script: yarn cypress run
 
 before_install:
     # PHP
@@ -62,13 +68,24 @@ before_install:
     - echo memory_limit = -1 >> $INI
     - echo session.gc_probability = 0 >> $INI
     - echo extension=apcu.so >> $INI
+    # https://symfony.com/doc/current/performance.html#use-the-opcache-byte-code-cache
+    - echo opcache.enable = 1 >> $INI
+    - echo opcache.enable_cli = 1 >> $INI
+    # https://symfony.com/doc/current/performance.html#configure-opcache-for-maximum-performance
+    - echo opcache.memory_consumption=256 >> $INI
+    - echo opcache.max_accelerated_files=20000 >> $INI
+    # https://symfony.com/doc/current/performance.html#don-t-check-php-files-timestamps
+    - echo opcache.validate_timestamps=0 >> $INI
+    # https://symfony.com/doc/current/performance.html#configure-the-php-realpath-cache
+    - echo realpath_cache_size=4096K >> $INI
+    - echo realpath_cache_ttl=600 >> $INI
 
     # Node
     - nvm install v10
     - nvm use 10
     - npm install --global yarn
 
-before_script:
+install:
     # PHP/Composer
     - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
     - composer install --no-interaction
@@ -76,16 +93,16 @@ before_script:
     # Node/Yarn
     - yarn install --frozen-lockfile
 
+before_script:
     # Bootstrap app
-    - yarn build:dev
-    - make init-db@test
+    - make install-app@test
 
 script:
     - composer validate
 
     - bin/console lint:twig templates
     - bin/console lint:yaml config --parse-tags
-
+    - bin/console api:swagger:export > /dev/null # trick to check if ApiPlatform is not correctly configured
     - bin/php-cs-fixer.phar fix --verbose --diff --dry-run src/
     - APP_ENV=test bin/console doctrine:schema:validate
 
@@ -95,3 +112,8 @@ script:
     - php bin/phpstan.phar analyse src/
     - php bin/simple-phpunit
     - php bin/phpspec run
+
+    # Behat
+    - make install-app@test
+    - bin/behat --format progress --tags '~@skip'
+    - bin/behat --tags '@skip' || true # run skipped tests to not forgot them, and don't stop the build if it fails
