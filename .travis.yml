@@ -95,6 +95,9 @@ install:
     - yarn install --frozen-lockfile
 
 before_script:
+    - psql -c 'DROP DATABASE IF EXISTS symfony_app_template_test;' -U postgres
+    - psql -c 'CREATE DATABASE symfony_app_template_test;' -U postgres
+
     # Bootstrap app
     - make install-app@test
 
