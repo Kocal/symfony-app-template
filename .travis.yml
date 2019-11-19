@@ -55,7 +55,7 @@ jobs:
           if: type = pull_request AND head_branch !~ /^dependabot/
           script:
               - CI_BUILD_ID=$(head -200 /dev/urandom | cksum | cut -f1 -d " ")
-              - yarn cypress run --record --ci-build-id $CI_BUILD_ID
+              - yarn cypress run --ci-build-id $CI_BUILD_ID
         - name: Cypress for Dependabot
           <<: *_cypress_job
           if: type = pull_request AND head_branch =~ /^dependabot/
