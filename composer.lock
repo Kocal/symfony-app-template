@@ -7675,16 +7675,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.3.8",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "324cf4b19c345465fad14f3602050519e09e361d"
+                "reference": "76de473358fe802578a415d5bb43c296cf09d211"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/324cf4b19c345465fad14f3602050519e09e361d",
-                "reference": "324cf4b19c345465fad14f3602050519e09e361d",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/76de473358fe802578a415d5bb43c296cf09d211",
+                "reference": "76de473358fe802578a415d5bb43c296cf09d211",
                 "shasum": ""
             },
             "require": {
@@ -7695,7 +7695,7 @@
                 "symfony/console": "<3.4"
             },
             "require-dev": {
-                "symfony/console": "~3.4|~4.0"
+                "symfony/console": "^3.4|^4.0|^5.0"
             },
             "suggest": {
                 "symfony/console": "For validating YAML files using the lint command"
@@ -7703,7 +7703,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -7730,7 +7730,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-30T12:58:49+00:00"
+            "time": "2019-11-12T14:51:11+00:00"
         },
         {
             "name": "twig/extensions",
@@ -8528,6 +8528,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -9952,12 +9953,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "c864e7f9b8d1e1f5f60acc3beda11299f637aded"
+                "reference": "2186c3bddd65aeed8479f37dbb56ed21358322bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/c864e7f9b8d1e1f5f60acc3beda11299f637aded",
-                "reference": "c864e7f9b8d1e1f5f60acc3beda11299f637aded",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/2186c3bddd65aeed8479f37dbb56ed21358322bb",
+                "reference": "2186c3bddd65aeed8479f37dbb56ed21358322bb",
                 "shasum": ""
             },
             "require": {
@@ -10012,7 +10013,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2019-11-07T00:56:03+00:00"
+            "time": "2019-11-23T13:04:30+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
