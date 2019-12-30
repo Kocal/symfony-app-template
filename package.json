@@ -35,7 +35,7 @@
     "dotenv": "^8.2.0",
     "eslint": "^5.16.0",
     "eslint-import-resolver-webpack": "^0.11.1",
-    "eslint-loader": "^3.0.2",
+    "eslint-loader": "^3.0.3",
     "eslint-plugin-cypress": "^2.7.0",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
