@@ -895,13 +895,13 @@
     "@sentry/utils" "5.10.2"
     tslib "^1.9.3"
 
-"@sentry/integrations@^5.7.1":
-  version "5.7.1"
-  resolved "https://registry.yarnpkg.com/@sentry/integrations/-/integrations-5.7.1.tgz#53ff804e2cb4f069d69c491cf20190f6aac6682e"
-  integrity sha512-LMKVVfB4VlpPE5I8OyD2soj/iNaicnpWObpBxfPDfsJAnXo5sV7zkWwEfvCia2dcXCXkpE2Xz77tiZubK7zrMQ==
+"@sentry/integrations@^5.10.2":
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/@sentry/integrations/-/integrations-5.10.2.tgz#44f5c55d1619d816c0f20208a3727bb07abb98c8"
+  integrity sha512-yvIJ6aXpzWlwD1WGTxvaeCm7JmNs4flWXKLlPWm2CEwgWBfjyaWjW7PqlA0jUOnLGCeYzgFD3AdUPlpgCsFXXA==
   dependencies:
-    "@sentry/types" "5.7.1"
-    "@sentry/utils" "5.7.1"
+    "@sentry/types" "5.10.0"
+    "@sentry/utils" "5.10.2"
     tslib "^1.9.3"
 
 "@sentry/minimal@5.10.2":
@@ -918,25 +918,12 @@
   resolved "https://registry.yarnpkg.com/@sentry/types/-/types-5.10.0.tgz#4f0ba31b6e4d5371112c38279f11f66c73b43746"
   integrity sha512-TW20GzkCWsP6uAxR2JIpIkiitCKyIOfkyDsKBeLqYj4SaZjfvBPnzgNCcYR0L0UsP1/Es6oHooZfIGSkp6GGxQ==
 
-"@sentry/types@5.7.1":
-  version "5.7.1"
-  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-5.7.1.tgz#4c4c1d4d891b6b8c2c3c7b367d306a8b1350f090"
-  integrity sha512-tbUnTYlSliXvnou5D4C8Zr+7/wJrHLbpYX1YkLXuIJRU0NSi81bHMroAuHWILcQKWhVjaV/HZzr7Y/hhWtbXVQ==
-
 "@sentry/utils@5.10.2":
   version "5.10.2"
   resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-5.10.2.tgz#261f575079d30aaf604e59f5f4de0aa21db22252"
   integrity sha512-UcbbaFpYrGSV448lQ16Cr+W/MPuKUflQQUdrMCt5vgaf5+M7kpozlcji4GGGZUCXIA7oRP93ABoXj55s1OM9zw==
   dependencies:
     "@sentry/types" "5.10.0"
-    tslib "^1.9.3"
-
-"@sentry/utils@5.7.1":
-  version "5.7.1"
-  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-5.7.1.tgz#cf37ad55f78e317665cd8680f202d307fa77f1d0"
-  integrity sha512-nhirUKj/qFLsR1i9kJ5BRvNyzdx/E2vorIsukuDrbo8e3iZ11JMgCOVrmC8Eq9YkHBqgwX4UnrPumjFyvGMZ2Q==
-  dependencies:
-    "@sentry/types" "5.7.1"
     tslib "^1.9.3"
 
 "@symfony/webpack-encore@^0.28.0":
