@@ -36,7 +36,7 @@
     "eslint": "^5.16.0",
     "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-loader": "^3.0.2",
-    "eslint-plugin-cypress": "^2.7.0",
+    "eslint-plugin-cypress": "^2.9.0",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
     "jest-serializer-vue": "^2.0.2",
