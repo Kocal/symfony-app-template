@@ -1350,10 +1350,10 @@
   resolved "https://registry.yarnpkg.com/@yproximite/eslint-config-base/-/eslint-config-base-1.0.5.tgz#3a363b116ce06737ab100a70e41c6c0300c4831c"
   integrity sha512-EUkJaQ51FxyLM4m0xsECYryX8IHs+4vzpwf+LYxH0g+UY6FfUDM9Lh5k3xzZpbK11tx0MHOCPLgvDPBTXCGSHw==
 
-"@yproximite/eslint-config-yprox@^1.3.10":
-  version "1.3.10"
-  resolved "https://registry.yarnpkg.com/@yproximite/eslint-config-yprox/-/eslint-config-yprox-1.3.10.tgz#78d6c15ea1f69cfac4d5a8bb70ff7b7f1515eb76"
-  integrity sha512-RAvmoxRj3J8+UHVwnf/PfaNaCYeyeTxOLAhiNvkQzSKK9hjJ3A/zxxvePhLlXArx8UNBAwYCHIo69D2mRA5Xmg==
+"@yproximite/eslint-config-yprox@^1.3.17":
+  version "1.3.17"
+  resolved "https://registry.yarnpkg.com/@yproximite/eslint-config-yprox/-/eslint-config-yprox-1.3.17.tgz#b1ec0bded30e9906db96fa935a50eaa6de25bf95"
+  integrity sha512-vbKQ1MEWU1IgztuAVcF9cqxbnck9enqWIEB7hGvSLEaxnY+1dvxXlnTHLNLilNK7kTquR/le4ilBnZSRPnZGcA==
   dependencies:
     "@yproximite/eslint-config-base" "^1.0.5"
     eslint-config-airbnb-base "^14.0.0"
