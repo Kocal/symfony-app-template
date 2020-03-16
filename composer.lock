@@ -4648,28 +4648,28 @@
         },
         {
             "name": "symfony/dotenv",
-            "version": "v4.3.8",
+            "version": "v5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
-                "reference": "62d93bf07edd0d76f033d65a7fd1c1ce50d28b50"
+                "reference": "48c8fdda51e5b24d031ce8ec221caa186337e36f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dotenv/zipball/62d93bf07edd0d76f033d65a7fd1c1ce50d28b50",
-                "reference": "62d93bf07edd0d76f033d65a7fd1c1ce50d28b50",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/48c8fdda51e5b24d031ce8ec221caa186337e36f",
+                "reference": "48c8fdda51e5b24d031ce8ec221caa186337e36f",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
+                "php": "^7.2.5"
             },
             "require-dev": {
-                "symfony/process": "^3.4.2|^4.0"
+                "symfony/process": "^4.4|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
@@ -4701,7 +4701,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-10-18T11:23:15+00:00"
+            "time": "2020-02-29T10:07:09+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -9957,12 +9957,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "ccb68bf03ba02e0211b4e04d92a6b7012e30bd55"
+                "reference": "a2d9c0b2995394ee9cab9bcb0b5a9617bac3f02b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/ccb68bf03ba02e0211b4e04d92a6b7012e30bd55",
-                "reference": "ccb68bf03ba02e0211b4e04d92a6b7012e30bd55",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/a2d9c0b2995394ee9cab9bcb0b5a9617bac3f02b",
+                "reference": "a2d9c0b2995394ee9cab9bcb0b5a9617bac3f02b",
                 "shasum": ""
             },
             "require": {
@@ -10017,7 +10017,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2020-01-18T22:29:46+00:00"
+            "time": "2020-03-04T14:03:53+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
