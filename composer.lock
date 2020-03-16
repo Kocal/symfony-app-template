@@ -7676,16 +7676,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.4.2",
+            "version": "v4.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "a08832b974dd5fafe3085a66d41fe4c84bb2628c"
+                "reference": "94d005c176db2080e98825d98e01e8b311a97a88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/a08832b974dd5fafe3085a66d41fe4c84bb2628c",
-                "reference": "a08832b974dd5fafe3085a66d41fe4c84bb2628c",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/94d005c176db2080e98825d98e01e8b311a97a88",
+                "reference": "94d005c176db2080e98825d98e01e8b311a97a88",
                 "shasum": ""
             },
             "require": {
@@ -7731,7 +7731,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-12-10T10:33:21+00:00"
+            "time": "2020-02-03T10:46:43+00:00"
         },
         {
             "name": "twig/extensions",
@@ -9957,12 +9957,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "ccb68bf03ba02e0211b4e04d92a6b7012e30bd55"
+                "reference": "a2d9c0b2995394ee9cab9bcb0b5a9617bac3f02b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/ccb68bf03ba02e0211b4e04d92a6b7012e30bd55",
-                "reference": "ccb68bf03ba02e0211b4e04d92a6b7012e30bd55",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/a2d9c0b2995394ee9cab9bcb0b5a9617bac3f02b",
+                "reference": "a2d9c0b2995394ee9cab9bcb0b5a9617bac3f02b",
                 "shasum": ""
             },
             "require": {
@@ -10017,7 +10017,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2020-01-18T22:29:46+00:00"
+            "time": "2020-03-04T14:03:53+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
