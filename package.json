@@ -56,7 +56,7 @@
     "@sentry/browser": "^5.10.2",
     "@sentry/integrations": "^5.10.2",
     "date-fns": "^2.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "vue": "^2.6.11"
   }
 }
