@@ -9,13 +9,22 @@ includes:
 parameters:
     level: max
     paths:
-        - src
-        - tests/phpunit
+        - .
     excludes_analyse:
-        - .php-cs-fixer.dist.php
-        - config
-        - tests/phpspec
+        # Vendors
+        - node_modules
+        - vendor
+        - vendor-bin
+        # Special files/directories
+        - public/index.php
+        - config/bootstrap.php
         - tests/phpunit/bootstrap.php
+        - var/cache
+        - var/log
+        # Other files
+        - .php-cs-fixer.dist.php
+        # Until PHPStan extension for phpspec is compatible with PHPStan 0.12
+        - tests/phpspec
     bootstrapFiles:
         - vendor-bin/phpunit/vendor/autoload.php
 
