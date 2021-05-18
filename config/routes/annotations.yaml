@@ -13,3 +13,7 @@ controllers_debug:
     type: annotation
     prefix: _debug
     condition: '%kernel.debug% == true'
+
+kernel:
+    resource: ../../src/Kernel.php
+    type: annotation

@@ -1,80 +1,28 @@
 includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
     - vendor/phpstan/phpstan-symfony/extension.neon
     - vendor/phpstan/phpstan-doctrine/extension.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
+    - vendor/knplabs/doctrine-behaviors/phpstan-extension.neon
 
 parameters:
     level: max
+    paths:
+        - src
+        - tests/phpunit
+    excludes_analyse:
+        - config
+        - tests/phpspec
+        - tests/phpunit/bootstrap.php
+    bootstrapFiles:
+        - bin/phpunit.phar
 
     inferPrivatePropertyTypeFromConstructor: true
 
     symfony:
-        container_xml_path: %rootDir%/../../../var/cache/dev/srcApp_KernelDevDebugContainer.xml
+        container_xml_path: var/cache/dev/App_KernelDevDebugContainer.xml
+        console_application_loader: tests/console-application.php
 
-    excludes_analyse:
-        - %rootDir%/../../../src/Migrations
-        - %rootDir%/../../../spec
-        - %rootDir%/../../../tests
-        - %rootDir%/../../../features
-
-# to avoid import rules that enforce PHPDoc on class properties
-services:
-    - class: PHPStan\Rules\BooleansInConditions\BooleanRuleHelper
-
-    - class: PHPStan\Rules\Operators\OperatorRuleHelper
-
-    - class: PHPStan\Rules\StrictCalls\StrictFunctionCallsRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\SwitchConditions\MatchingTypeInSwitchCaseConditionRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\BooleansInConditions\BooleanInBooleanAndRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\BooleansInConditions\BooleanInBooleanOrRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\BooleansInConditions\BooleanInElseIfConditionRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\BooleansInConditions\BooleanInIfConditionRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\BooleansInConditions\BooleanInTernaryOperatorRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\DisallowedConstructs\DisallowedEmptyRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\DisallowedConstructs\DisallowedImplicitArrayCreationRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\Operators\OperandInArithmeticPostDecrementRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\Operators\OperandInArithmeticPostIncrementRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\Operators\OperandInArithmeticPreDecrementRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\Operators\OperandsInArithmeticAdditionRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\Operators\OperandsInArithmeticDivisionRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\Operators\OperandsInArithmeticExponentiationRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\Operators\OperandsInArithmeticModuloRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\Operators\OperandsInArithmeticMultiplicationRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\Operators\OperandsInArithmeticSubtractionRule
-      tags: [phpstan.rules.rule]
-
-    - class: PHPStan\Rules\StrictCalls\DynamicCallOnStaticMethodsRule
-      tags: [phpstan.rules.rule]
+    doctrine:
+        objectManagerLoader: tests/object-manager.php

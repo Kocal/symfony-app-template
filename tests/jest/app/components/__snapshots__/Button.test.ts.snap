@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button Color "danger" 1`] = `
+<button
+  class="btn btn-sm btn-danger"
+/>
+`;
+
+exports[`button Color "primary" 1`] = `
+<button
+  class="btn btn-sm btn-primary"
+/>
+`;
+
+exports[`button Color "success" 1`] = `
+<button
+  class="btn btn-sm btn-success"
+/>
+`;
+
+exports[`button Size "lg" 1`] = `
+<button
+  class="btn btn-sm btn-lg"
+/>
+`;
+
+exports[`button Size "sm" 1`] = `
+<button
+  class="btn btn-sm btn-sm"
+/>
+`;
+
+exports[`button Size "xl" 1`] = `
+<button
+  class="btn btn-sm btn-xl"
+/>
+`;
+
+exports[`button Size "xs" 1`] = `
+<button
+  class="btn btn-sm btn-xs"
+/>
+`;
+
+exports[`button complex render 1`] = `
+<button disabled="disabled" class="btn btn-xl btn-success btn-loading btn-icon disabled btn-outline btn-auto">
+  <div class="loading"><i class="fa fa-spinner-third fa-spin"></i></div>
+</button>
+`;
+
+exports[`button loading 1`] = `
+<button class="btn btn-sm btn-primary btn-loading">
+  <div class="loading"><i class="fa fa-spinner-third fa-spin"></i></div>
+</button>
+`;

@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
-use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Doctrine\ORM\Mapping as ORM;
+use Knp\DoctrineBehaviors\Contract\Entity\TimestampableInterface;
+use Knp\DoctrineBehaviors\Model\Timestampable\TimestampableTrait;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -18,42 +19,38 @@ use Symfony\Component\Security\Core\User\UserInterface;
  *    normalizationContext={"ignored_attributes": {"password", "salt"}}
  * )
  */
-class User implements UserInterface
+class User implements UserInterface, TimestampableInterface
 {
-    use TimestampableEntity;
+    use TimestampableTrait;
 
     /**
+     * @var int|null
+     *
      * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      */
     private $id;
 
     /**
+     * @var string|null
+     *
      * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
 
     /**
+     * @var array<string>
+     *
      * @ORM\Column(type="json")
      */
     private $roles = [];
 
     /**
-     * @var string The hashed password
+     * @var string|null The hashed password
      * @ORM\Column(type="string")
      */
     private $password;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $apiKey;
-
-    public function __construct()
-    {
-        $this->apiKey = bin2hex(random_bytes(20));
-    }
 
     public function getId(): ?int
     {
@@ -83,7 +80,7 @@ class User implements UserInterface
     }
 
     /**
-     * @see UserInterface
+     * {@inheritdoc}
      */
     public function getRoles(): array
     {
@@ -94,6 +91,9 @@ class User implements UserInterface
         return array_unique($roles);
     }
 
+    /**
+     * @param array<string> $roles
+     */
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
@@ -102,7 +102,7 @@ class User implements UserInterface
     }
 
     /**
-     * @see UserInterface
+     * {@inheritdoc}
      */
     public function getPassword(): string
     {
@@ -117,31 +117,20 @@ class User implements UserInterface
     }
 
     /**
-     * @see UserInterface
+     * {@inheritdoc}
      */
     public function getSalt()
     {
         // not needed when using the "bcrypt" algorithm in security.yaml
+        return null;
     }
 
     /**
-     * @see UserInterface
+     * {@inheritdoc}
      */
-    public function eraseCredentials()
+    public function eraseCredentials(): void
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
-    }
-
-    public function getApiKey(): string
-    {
-        return $this->apiKey;
-    }
-
-    public function setApiKey(string $apiKey): self
-    {
-        $this->apiKey = $apiKey;
-
-        return $this;
     }
 }

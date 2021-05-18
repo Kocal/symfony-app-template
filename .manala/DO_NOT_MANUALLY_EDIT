@@ -1,0 +1,10 @@
+###############################################################
+# !!! DO NOT DIRECTLY EDIT FILES IN THIS DIRECTORY !!!        #
+#                                                             #
+# The files in this directory must not updated directly.      #
+# By doing this, you will lost ALL your modifications when    #
+# updating your .manala.yaml and running "manala up".         #
+#                                                             #
+# If you really need to update those files, contribute to the #
+# recipe or create one that will fill your requirements!      #
+###############################################################

@@ -1,0 +1,31 @@
+####################################################################
+# !!! REMINDER !!!                                                 #
+# Don't forget to run `manala up` each time you update this file ! #
+####################################################################
+
+manala:
+    recipe: yprox.app-docker
+    repository: https://github.com/Yproximite/manala-recipes.git
+
+##########
+# System #
+##########
+
+system:
+    app_name: symfony-app-template
+    php:
+        configs:
+            # XDebug
+            - config: |
+                  ; Comment/uncomment the following lines to disable/enable XDebug
+                  ;zend_extension=xdebug.so
+                  ;xdebug.remote_enable=1
+                  ;xdebug.remote_autostart=1
+
+            # App
+            - config: |
+                  ;App specific configuration
+    postgresql:
+        version: 12
+    redis:
+        version: '*'

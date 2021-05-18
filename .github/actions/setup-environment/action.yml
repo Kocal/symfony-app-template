@@ -1,0 +1,29 @@
+name: Setup environment
+description: Setup environment
+runs:
+    using: 'composite'
+    steps:
+        - run: echo "PHP_VERSION=$(cat .php-version | xargs)" >> $GITHUB_ENV
+          shell: bash
+
+        - run: echo "NODE_VERSION=$(cat .nvmrc | xargs)" >> $GITHUB_ENV
+          shell: bash
+
+        - run: echo "IS_DEPENDABOT=${{ startsWith(github.head_ref, 'dependabot') == true }}" >> $GITHUB_ENV
+          shell: bash
+
+        # Composer cache
+        - id: composer-cache
+          run: echo "::set-output name=dir::$(composer global config cache-files-dir)"
+          shell: bash
+
+        - run: echo "COMPOSER_CACHE_DIR=${{ steps.composer-cache.outputs.dir }}" >> $GITHUB_ENV
+          shell: bash
+
+        # Yarn cache
+        - id: yarn-cache-dir
+          run: echo "::set-output name=dir::$(yarn cache dir)"
+          shell: bash
+
+        - run: echo "YARN_CACHE_DIR=${{ steps.yarn-cache-dir.outputs.dir }}" >> $GITHUB_ENV
+          shell: bash

@@ -6,6 +6,7 @@ namespace App\Controller\Debug;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DebugRequestController extends AbstractController
@@ -13,7 +14,7 @@ class DebugRequestController extends AbstractController
     /**
      * @Route("/request", name="debug_request")
      */
-    public function debugRequest(Request $request)
+    public function debugRequest(Request $request): Response
     {
         return $this->render('debug/request.html.twig');
     }
