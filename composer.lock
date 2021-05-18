@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f7e08c74383ad601310ca7d1420a039",
+    "content-hash": "cdc63398e2772769700c67db32114e4f",
     "packages": [
         {
             "name": "api-platform/core",
@@ -1918,16 +1918,16 @@
         },
         {
             "name": "friendsofsymfony/jsrouting-bundle",
-            "version": "2.7.0",
+            "version": "dev-migrate-to-typescript",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
-                "reference": "d56600542504148bf2faa2b6bd7571a6adf6799e"
+                "url": "https://github.com/Kocal/FOSJsRoutingBundle.git",
+                "reference": "0b85fcebe36ecb7afd95759654c3341e0b316acf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/d56600542504148bf2faa2b6bd7571a6adf6799e",
-                "reference": "d56600542504148bf2faa2b6bd7571a6adf6799e",
+                "url": "https://api.github.com/repos/Kocal/FOSJsRoutingBundle/zipball/0b85fcebe36ecb7afd95759654c3341e0b316acf",
+                "reference": "0b85fcebe36ecb7afd95759654c3341e0b316acf",
                 "shasum": ""
             },
             "require": {
@@ -1955,7 +1955,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1972,15 +1971,14 @@
             "description": "A pretty nice way to expose your Symfony2 routing to client applications.",
             "homepage": "http://friendsofsymfony.github.com",
             "keywords": [
-                "Js Routing",
                 "javascript",
+                "js routing",
                 "routing"
             ],
             "support": {
-                "issues": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle/issues",
-                "source": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle/tree/2.7.0"
+                "source": "https://github.com/Kocal/FOSJsRoutingBundle/tree/migrate-to-typescript"
             },
-            "time": "2020-11-20T10:38:12+00:00"
+            "time": "2021-05-18T22:03:25+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -12185,7 +12183,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "friendsofsymfony/jsrouting-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

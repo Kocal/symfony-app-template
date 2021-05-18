@@ -3,6 +3,12 @@
   "type": "project",
   "license": "proprietary",
   "description": "A skeleton to start a new Symfony website",
+  "repositories": [
+    {
+      "type": "github",
+      "url": "https://github.com/Kocal/FOSJsRoutingBundle.git"
+    }
+  ],
   "require": {
     "php": "~8.0",
     "ext-ctype": "*",
@@ -13,7 +19,7 @@
     "doctrine/doctrine-bundle": "^2.2",
     "doctrine/doctrine-migrations-bundle": "^3.0",
     "doctrine/orm": "^2.7",
-    "friendsofsymfony/jsrouting-bundle": "^2.6",
+    "friendsofsymfony/jsrouting-bundle": "dev-migrate-to-typescript",
     "knplabs/doctrine-behaviors": "^2.0",
     "knplabs/knp-time-bundle": "^1.11",
     "league/html-to-markdown": "^4.10",
