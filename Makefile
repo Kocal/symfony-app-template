@@ -49,8 +49,7 @@ init-db@test: init-db
 
 init-db@integration: export APP_ENV=test
 init-db@integration:
-	$(symfony) console doctrine:database:drop --force --if-exists --no-interaction
-	$(symfony) console doctrine:database:create --no-interaction
+	$(symfony) console doctrine:database:create --if-not-exists --no-interaction
 	$(symfony) console doctrine:schema:update --force --no-interaction # to remove when we will use migrations
 	# $(symfony) console doctrine:migrations:migrate --no-interaction
 	$(symfony) console hautelook:fixtures:load --no-interaction
