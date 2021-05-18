@@ -57,10 +57,10 @@ jobs:
             - run: symfony console lint:xliff translations
 
             # Run static code analysis tools
-            - run: symfony php bin/php-cs-fixer.phar fix --verbose --diff --dry-run
+            - run: symfony php bin/php-cs-fixer fix --verbose --diff --dry-run
             - run: symfony php bin/phpcs
             - run: symfony php bin/phpstan analyse
-            - run: APP_ENV=test symfony php bin/phpunit.phar # See https://github.com/symfony/symfony-docs/pull/15228
+            - run: APP_ENV=test symfony php bin/phpunit # See https://github.com/symfony/symfony-docs/pull/15228
             - run: symfony php bin/phpspec run
 
     javascript:

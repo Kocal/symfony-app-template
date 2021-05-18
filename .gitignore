@@ -1,23 +1,25 @@
-# PHP-CS-Fixer
-/.php_cs.cache
+/vendor-bin/**/vendor
+
+# PHP CS Fixer
+/.php-cs-fixer.cache
+
+# PHP Code Sniffer
+/.phpcs-cache
 
 # Cypress
 /tests/cypress/screenshots/
 /tests/cypress/videos/
 
-/bin/*
-!/bin/.gitkeep
-!/bin/console
-!/bin/dump-translations.sh
-!/bin/*.phar
-!/var/.gitkeep
-
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
 /.env.*.local
+/bin/*
+!/bin/console
+!/bin/dump-translations.sh
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
+!/var/.gitkeep
 /var/cache
 /var/log
 /vendor/
@@ -29,11 +31,6 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
-
-###> squizlabs/php_codesniffer ###
-/.phpcs-cache
-/phpcs.xml
-###< squizlabs/php_codesniffer ###
 
 ###> symfony/phpunit-bridge ###
 .phpunit

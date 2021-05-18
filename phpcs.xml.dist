@@ -6,7 +6,7 @@
     <arg name="colors"/>
     <arg name="extensions" value="php"/>
 
-    <rule ref="./vendor/escapestudios/symfony2-coding-standard/Symfony/ruleset.xml">
+    <rule ref="./vendor-bin/php-codesniffer/vendor/escapestudios/symfony2-coding-standard/Symfony/ruleset.xml">
         <exclude name="Symfony.Commenting.Annotations.Invalid"/>
         <exclude name="Symfony.Commenting.ClassComment.Missing"/>
         <exclude name="Symfony.Commenting.FunctionComment.MissingParamComment"/>

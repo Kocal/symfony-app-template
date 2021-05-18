@@ -16,6 +16,9 @@
             "src/Entity/.gitignore"
         ]
     },
+    "bamarni/composer-bin-plugin": {
+        "version": "1.4.1"
+    },
     "brick/math": {
         "version": "0.8.15"
     },
@@ -109,9 +112,6 @@
     },
     "egulias/email-validator": {
         "version": "2.1.17"
-    },
-    "escapestudios/symfony2-coding-standard": {
-        "version": "3.11.0"
     },
     "fakerphp/faker": {
         "version": "v1.10.1"
@@ -284,39 +284,6 @@
     "php-translation/symfony-storage": {
         "version": "2.2.0"
     },
-    "phpdocumentor/reflection-common": {
-        "version": "2.0.0"
-    },
-    "phpdocumentor/reflection-docblock": {
-        "version": "4.3.4"
-    },
-    "phpdocumentor/type-resolver": {
-        "version": "1.0.1"
-    },
-    "phpspec/php-diff": {
-        "version": "v1.1.0"
-    },
-    "phpspec/phpspec": {
-        "version": "6.1.1"
-    },
-    "phpspec/prophecy": {
-        "version": "v1.10.2"
-    },
-    "phpstan/phpstan": {
-        "version": "0.12.11"
-    },
-    "phpstan/phpstan-doctrine": {
-        "version": "0.12.9"
-    },
-    "phpstan/phpstan-phpunit": {
-        "version": "0.12.6"
-    },
-    "phpstan/phpstan-strict-rules": {
-        "version": "0.12.2"
-    },
-    "phpstan/phpstan-symfony": {
-        "version": "0.12.4"
-    },
     "predis/predis": {
         "version": "v1.1.1"
     },
@@ -407,20 +374,11 @@
             "config/packages/snc_redis.yaml"
         ]
     },
-    "squizlabs/php_codesniffer": {
-        "version": "3.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "master",
-            "version": "3.0",
-            "ref": "0dc9cceda799fd3a08b96987e176a261028a3709"
-        },
-        "files": [
-            "phpcs.xml.dist"
-        ]
-    },
     "symfony/asset": {
         "version": "v5.0.4"
+    },
+    "symfony/browser-kit": {
+        "version": "v5.2.7"
     },
     "symfony/cache": {
         "version": "v5.0.4"
@@ -469,6 +427,9 @@
     },
     "symfony/doctrine-bridge": {
         "version": "v5.0.4"
+    },
+    "symfony/dom-crawler": {
+        "version": "v5.2.4"
     },
     "symfony/dotenv": {
         "version": "v5.0.4"
@@ -707,6 +668,9 @@
     },
     "symfony/string": {
         "version": "v5.0.4"
+    },
+    "symfony/test-pack": {
+        "version": "v1.0.7"
     },
     "symfony/translation": {
         "version": "3.3",
