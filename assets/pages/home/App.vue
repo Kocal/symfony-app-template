@@ -2,19 +2,18 @@
   <div>
     Hello world!
 
-    <SymfonyAppTemplateButton size="xs" outline>
-      Je suis un bouton
-    </SymfonyAppTemplateButton>
+    <AppButton size="xs" outline>Je suis un bouton</AppButton>
   </div>
 </template>
 
-<script>
-import SymfonyAppTemplateButton from '@app/components/Button';
+<script lang="ts">
+import AppButton from '@app/components/AppButton';
+import { Component, Vue } from 'vue-property-decorator';
 
-export default {
-  name: 'App',
+@Component({
   components: {
-    SymfonyAppTemplateButton,
+    AppButton,
   },
-};
+})
+export default class App extends Vue {}
 </script>

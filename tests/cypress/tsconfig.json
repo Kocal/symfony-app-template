@@ -1,0 +1,9 @@
+{
+  // Having a tsconfig.json for Cypress will prevent types conflicts with Jest
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false
+  },
+  "include": [".", "../../node_modules/cypress"],
+  "exclude": ["../jest"]
+}

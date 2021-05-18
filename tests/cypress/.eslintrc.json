@@ -1,0 +1,12 @@
+{
+  "extends": ["plugin:cypress/recommended", "plugin:chai-friendly/recommended", "plugin:mocha/recommended"],
+  "plugins": ["mocha"],
+  "rules": {
+    "func-names": "off",
+    "mocha/no-exclusive-tests": "error",
+    // Si quelqu'un trouve un moyen d'activer la règle SANS qu'elle soit automatiquement fixée...
+    "mocha/no-skipped-tests": "off",
+    // Je pense que c'est mieux de préparer le `before()` pour un possible second test
+    "mocha/no-hooks-for-single-case": "off"
+  }
+}

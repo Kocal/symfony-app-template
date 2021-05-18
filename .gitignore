@@ -1,15 +1,10 @@
-# Vagrant
-/.vagrant/
+/vendor-bin/**/vendor
 
-# Ansible
-/ansible/*.retry
-/ansible/group_vars/*_local.yml
-/ansible/roles/.downloads
-/ansible/roles/manala.*
-!ansible/roles/.gitkeep
+# PHP CS Fixer
+/.php-cs-fixer.cache
 
-# PHP-CS-Fixer
-/.php_cs.cache
+# PHP Code Sniffer
+/.phpcs-cache
 
 # Cypress
 /tests/cypress/screenshots/
@@ -21,22 +16,14 @@
 /.env.*.local
 /bin/*
 !/bin/console
-!/bin/php-cs-fixer.phar
-!/bin/security-checker.phar
+!/bin/dump-translations.sh
+/config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
-/var/*
 !/var/.gitkeep
+/var/cache
+/var/log
 /vendor/
 ###< symfony/framework-bundle ###
-
-###> symfony/phpunit-bridge ###
-.phpunit
-/phpunit.xml
-###< symfony/phpunit-bridge ###
-
-###> symfony/web-server-bundle ###
-/.web-server-pid
-###< symfony/web-server-bundle ###
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
@@ -45,6 +32,8 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
-###> friends-of-behat/symfony-extension ###
-/behat.yml
-###< friends-of-behat/symfony-extension ###
+###> symfony/phpunit-bridge ###
+.phpunit
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###

@@ -15,33 +15,22 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        api_login:
-            pattern: ^/api/login
-            stateless: true
-            anonymous: false
-            json_login:
-                check_path: api_login
-
-        api:
-            pattern: ^/api/
-            stateless: true
-            anonymous: false
-            guard:
-                authenticators:
-                    - App\Security\ApiKeyAuthenticator
-
         main:
             anonymous: true
+            lazy: true
             guard:
                 authenticators:
                     - App\Security\FormAuthenticator
+            logout:
+                path: app_logout
+                target: app_login
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/_debug, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/translations, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
-        - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/, roles: ROLE_USER }
         # - { path: ^/profile, roles: ROLE_USER }

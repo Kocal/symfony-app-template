@@ -1,0 +1,171 @@
+name: CI
+
+on:
+    pull_request:
+        types: [opened, synchronize, reopened, ready_for_review]
+
+env:
+    TZ: UTC
+
+jobs:
+    php:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - uses: ./.github/actions/setup-environment
+
+            - uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ env.PHP_VERSION }}
+                  coverage: none
+                  extensions: iconv, intl
+                  ini-values: date.timezone=${{ env.TZ }}
+                  tools: symfony
+
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+
+            - uses: actions/cache@v2
+              with:
+                  path: ${{ env.COMPOSER_CACHE_DIR }}
+                  key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: ${{ runner.os }}-composer-
+
+            - uses: actions/cache@v2
+              with:
+                  path: ${{ env.YARN_CACHE_DIR }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: ${{ runner.os }}-yarn-
+
+            # Check dependencies
+            - run: symfony composer validate
+            - run: symfony security:check
+
+            # Install environment and application
+            - run: make setup@integration
+
+            # Prepare tests
+            - run: symfony console cache:clear
+            - run: APP_ENV=test symfony console doctrine:schema:validate # force APP_ENV=test because only the test database is created
+            - run: symfony console api:swagger:export > /dev/null # Check if ApiPlatform is correctly configured
+
+            # Lint Twig, Yaml and XLIFF files
+            - run: symfony console lint:twig templates
+            - run: symfony console lint:yaml config --parse-tags
+            - run: symfony console lint:xliff translations
+
+            # Run static code analysis tools
+            - run: symfony php bin/php-cs-fixer fix --verbose --diff --dry-run
+            - run: symfony php bin/phpcs
+            - run: symfony php bin/phpstan analyse
+            - run: APP_ENV=test symfony php bin/phpunit # See https://github.com/symfony/symfony-docs/pull/15228
+            - run: symfony php bin/phpspec run
+
+    javascript:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - uses: ./.github/actions/setup-environment
+
+            - uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ env.PHP_VERSION }}
+                  coverage: none
+                  extensions: iconv, intl
+                  ini-values: date.timezone=${{ env.TZ }}
+                  tools: symfony
+
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+
+            - uses: actions/cache@v2
+              with:
+                  path: ${{ env.COMPOSER_CACHE_DIR }}
+                  key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: ${{ runner.os }}-composer-
+
+            - uses: actions/cache@v2
+              with:
+                  path: ${{ env.YARN_CACHE_DIR }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: ${{ runner.os }}-yarn-
+
+            - run: make setup@integration
+
+            # Check TypeScript types
+            - run: yarn check-types
+            - run: yarn check-types --project tests/cypress
+
+            # Lint files
+            - run: yarn lint:js --no-fix
+            - run: yarn lint:css --no-fix
+
+            # Build assets for dev and prod
+            - run: yarn dev
+            - run: yarn prod
+
+    cypress:
+        runs-on: ubuntu-latest
+        name: cypress (${{ matrix.cypress.group }})
+        strategy:
+            fail-fast: false
+            matrix:
+                # Add more entries if you want to benefit of parallelization
+                cypress:
+                    - group: default
+                      spec: 'tests/cypress/**/*'
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - uses: ./.github/actions/setup-environment
+
+            - uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ env.PHP_VERSION }}
+                  coverage: none
+                  extensions: iconv, intl
+                  ini-values: date.timezone=${{ env.TZ }}
+                  tools: symfony
+
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+
+            - uses: actions/cache@v2
+              with:
+                  path: ${{ env.COMPOSER_CACHE_DIR }}
+                  key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: ${{ runner.os }}-composer-
+
+            - uses: actions/cache@v2
+              with:
+                  path: ${{ env.YARN_CACHE_DIR }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: ${{ runner.os }}-yarn-
+
+            - run: make setup@integration
+
+            # Start Symfony Server
+            - run: APP_ENV=test symfony serve --port 8000 --daemon
+            - run: echo "CYPRESS_BASE_URL=https://localhost:8000" >> $GITHUB_ENV
+
+            - name: Run Cypress
+              if: ${{ env.IS_DEPENDABOT == 'false' && ! github.event.pull_request.draft }}
+              uses: cypress-io/github-action@v2
+              with:
+                  spec: ${{ matrix.cypress.spec }}
+                  # To uncomment when the project will be configured on Cypress Dashboard
+                  #record: true
+                  #parallel: true
+                  #group: ${{ matrix.cypress.group }}
+              #env:
+              #    CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+            - name: Run Cypress (for Dependabot or when pull request is draft)
+              if: ${{ env.IS_DEPENDABOT == 'true' || github.event.pull_request.draft }}
+              uses: cypress-io/github-action@v2

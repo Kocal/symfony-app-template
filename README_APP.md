@@ -1,74 +1,72 @@
 # App Name
 
-[![Build Status](https://travis-ci.com/Kocal/symfony-app-template.svg?branch=master)](https://travis-ci.com/Kocal/symfony-app-template)
+![CI](https://github.com/Yproximite/symfony-app-template/workflows/CI/badge.svg)
+![CI (develop)](https://github.com/Yproximite/symfony-app-template/workflows/CI/badge.svg?branch=develop)
 
-**Access:**
+**Accès :**
 
-- Local: http://symfony-app-template.vm
-- Local (dev env) : http://symfony-app-template.vm:8000
-- Local (prod env) : http://symfony-app-template.vm:8001
-- Pre-Prod: https://demo.symfony-app-template.fr
-- Prod: https://symfony-app-template.fr
+- Local (dev) : `symfony serve`, https://symfony-app-template.io
+- Local (test) : `APP_ENV=test symfony serve`, https://symfony-app-template.io
+- Local (prod) : `APP_ENV=prod symfony serve`, https://symfony-app-template.io
+- Pre-Prod : https://demo.symfony-app-template.fr
+- Prod : https://symfony-app-template.fr
 
 ## Requirements
 
 ### Dev
 
 - Make
-- [VirtualBox 5.2.4+](https://www.virtualbox.org/wiki/Downloads)
-- [Vagrant 2.2.1+](https://www.vagrantup.com/downloads.html)
-- [Vagrant Landrush 1.2.0+](https://github.com/vagrant-landrush/landrush)
+- [Symfony CLI](https://symfony.com/doc/current/setup/symfony_server.html)
+- PHP installé en local, voir [les étapes d'installation](https://github.com/Yproximite/symfony-app-template#installer-php-sur-sa-machine)
+- Node.js installé en local, voir [les étapes d'installation](https://github.com/Yproximite/symfony-app-template#installer-php-sur-sa-machine)
+- Tous ceux listés dans les [requirements de la recipe manala `yprox.app-docker`](https://github.com/Yproximite/manala-recipes/tree/main/yprox.app-docker#requirements)
 
 ### Prod
 
-- PHP 7.3
-- PostgreSQL 10
-- Node.js and Yarn
+...
 
-## Run the Virtual Machine for the first time
+## Mise en route du projet
 
-From the project root, run:
+Depuis le dossier racine du projet, faire :
 
-```bash
+```shell
+# On vérifie que la recipe `yprox.app-docker` est bien synchronisée avec le projet
+$ manala up
+
+# Configure Symfony CLI (certificat HTTPS, proxy...), construit les containes Docker
 $ make setup
-$ vagrant ssh
-# in the VM
+```
+
+Puis démarrer le serveur web :
+
+```shell
+$ symfony serve
+```
+
+## Opérations de maintenance
+
+Les opérations "communes" (démarrer/stoper les containers Docker, etc...) sont listées [ici](https://github.com/Yproximite/manala-recipes/tree/main/yprox.app-docker#docker-interaction).
+
+### Re-synchroniser l'application après changement de branche
+
+```shell
 $ make install-app
 ```
 
-## Maintenance operations
+## Lancer Cypress
 
-### Run the VM
+Il faut lancer le server Symfony en environnement de test :
 
-```bash
-# to run outside the VM
-$ vagrant up
+```shell
+APP_ENV=test symfony serve
 ```
 
-### Connect to the VM
+Puis lancer Cypress:
 
-```bash
-# to run outside the VM
-$ vagrant ssh
+```shell
+yarn cypress
 ```
 
-### Re-sync the app (when changing git branch)
+## Outils (UI base de données, Redis...)
 
-```bash
-# to run inside the VM
-$ make install-app
-```
-
-### Update the VM
-
-```bash
-# to run outside the VM
-$ make update
-```
-
-## Local tools
-
-- [phpPgAdmin](http://symfony-app-template.vm:1980/)
-- [phpRedisAdmin](http://symfony-app-template.vm:1981/)
-- [MailHog](http://symfony-app-template.vm:8025/)
-- [OPCache Dashboard](http://symfony-app-template.vm:2013/)
+Voir https://github.com/Yproximite/manala-recipes/tree/main/yprox.app-docker#tools.

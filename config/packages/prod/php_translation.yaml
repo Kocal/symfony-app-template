@@ -1,5 +1,7 @@
 translation:
-    locales: ['fr']
+    locales: ['%locale%']
+    edit_in_place:
+        enabled: false
     symfony_profiler:
         enabled: false
     webui:

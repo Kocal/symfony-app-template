@@ -8,8 +8,8 @@ use PHPUnit\Framework\TestCase;
 
 class AcmeTest extends TestCase
 {
-    public function testAcme()
+    public function testAcme(): void
     {
-        $this->assertEquals(2, 1 + 1);
+        static::assertEquals(2, 1 + 1);
     }
 }

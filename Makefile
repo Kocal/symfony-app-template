@@ -1,58 +1,15 @@
-.SILENT:
-.PHONY: build test
+-include .manala/Makefile
 
-## Colors
-COLOR_RESET   = \033[0m
-COLOR_INFO    = \033[32m
-COLOR_COMMENT = \033[33m
+# This function will be called at the end of "make setup"
+define setup
+    $(MAKE) install-app
+    $(MAKE) init-db@test
+endef
 
-## Help
-help:
-	printf "${COLOR_COMMENT}Usage:${COLOR_RESET}\n"
-	printf " make [target]\n\n"
-	printf "${COLOR_COMMENT}Available targets:${COLOR_RESET}\n"
-	awk '/^[a-zA-Z\-\_0-9\.@]+:/ { \
-		helpMessage = match(lastLine, /^## (.*)/); \
-		if (helpMessage) { \
-			helpCommand = substr($$1, 0, index($$1, ":")); \
-			helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
-			printf " ${COLOR_INFO}%-16s${COLOR_RESET} %s\n", helpCommand, helpMessage; \
-		} \
-	} \
-	{ lastLine = $$0 }' $(MAKEFILE_LIST)
-
-###############
-# Environment #
-###############
-
-## Setup environment
-setup:
-	vagrant up --no-provision
-	vagrant provision
-
-## Update environment
-update: export ANSIBLE_TAGS = manala.update
-update:
-	vagrant provision
-
-## Update ansible
-update-ansible: export ANSIBLE_TAGS = manala.update
-update-ansible:
-	vagrant provision --provision-with ansible
-
-## Provision environment
-provision: export ANSIBLE_EXTRA_VARS = {"manala":{"update":false}}
-provision:
-	vagrant provision --provision-with app
-
-## Provision nginx
-provision-nginx: export ANSIBLE_TAGS = manala_nginx
-provision-nginx: provision
-
-## Provision php
-provision-php: export ANSIBLE_TAGS = manala_php
-provision-php: provision
-
+# This function will be called at the end of "make setup@integration"
+define setup_integration
+    $(MAKE) install-app@integration
+endef
 
 ###########
 # Install #
@@ -61,33 +18,42 @@ provision-php: provision
 ## Install application
 install-app: composer-install init-db
 install-app:
-	bin/console cache:clear
+	$(symfony) console cache:clear
 	yarn install
-	yarn build:dev
+	yarn dev
 
-install-app@test: composer-install init-db@test
-install-app@test:
-	APP_ENV=test bin/console cache:clear
-	yarn install
-	yarn build:dev
+## Install application in integration environment
+install-app@integration: export APP_ENV=test
+install-app@integration:
+	$(composer) install --ansi --no-interaction --no-progress --prefer-dist --optimize-autoloader
+	yarn install --color=always --no-progress --frozen-lockfile
+	yarn dev
+	$(MAKE) init-db@integration
 
 ################
 # Common tasks #
 ################
 
 composer-install:
-	composer install --verbose --no-interaction
+	$(composer) install --ansi --no-interaction
 
 init-db:
-	bin/console doctrine:database:drop --force --if-exists --no-interaction
-	bin/console doctrine:database:create --no-interaction
-	bin/console doctrine:schema:update --force --no-interaction # to comment when we will use migrations
-	# bin/console doctrine:migrations:migrate --no-interaction
-	bin/console hautelook:fixtures:load --no-interaction
+	$(symfony) console doctrine:database:drop --force --if-exists --no-interaction
+	$(symfony) console doctrine:database:create --no-interaction
+	$(symfony) console doctrine:schema:update --force --no-interaction # to remove when we will use migrations
+	# $(symfony) console doctrine:migrations:migrate --no-interaction
+	$(symfony) console hautelook:fixtures:load --no-interaction
 
-init-db@test:
-	APP_ENV=test bin/console doctrine:database:drop --force --if-exists --no-interaction
-	APP_ENV=test bin/console doctrine:database:create --no-interaction
-	APP_ENV=test bin/console doctrine:schema:update --force --no-interaction # to comment when we will use migrations
-	# APP_ENV=test bin/console doctrine:migrations:migrate --no-interaction
-	APP_ENV=test bin/console hautelook:fixtures:load --no-interaction
+init-db@test: export APP_ENV=test
+init-db@test: init-db
+
+init-db@integration: export APP_ENV=test
+init-db@integration:
+	$(symfony) console doctrine:database:create --if-not-exists --no-interaction
+	$(symfony) console doctrine:schema:update --force --no-interaction # to remove when we will use migrations
+	# $(symfony) console doctrine:migrations:migrate --no-interaction
+	$(symfony) console hautelook:fixtures:load --no-interaction
+
+reload-db@test: export APP_ENV=test
+reload-db@test:
+	$(symfony) console hautelook:fixtures:load --purge-with-truncate --no-interaction
