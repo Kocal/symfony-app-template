@@ -16,7 +16,7 @@
     "friendsofsymfony/jsrouting-bundle": "^2.6",
     "knplabs/doctrine-behaviors": "^2.0",
     "knplabs/knp-time-bundle": "^1.11",
-    "league/html-to-markdown": "^4.10",
+    "league/html-to-markdown": "^5.0",
     "nelmio/cors-bundle": "^2.1",
     "nyholm/psr7": "^1.4",
     "php-translation/symfony-bundle": "^0.12.3",
