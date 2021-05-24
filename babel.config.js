@@ -9,7 +9,6 @@ module.exports = {
       },
     ],
     '@babel/typescript',
-    '@vue/babel-preset-jsx',
   ],
   plugins: [
     '@babel/plugin-transform-runtime',
