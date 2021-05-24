@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppButton color "danger" 1`] = `
+<button
+  class="btn btn-sm btn-danger"
+>
+  
+  
+</button>
+`;
+
+exports[`AppButton color "primary" 1`] = `
+<button
+  class="btn btn-sm btn-primary"
+>
+  
+  
+</button>
+`;
+
+exports[`AppButton color "success" 1`] = `
+<button
+  class="btn btn-sm btn-success"
+>
+  
+  
+</button>
+`;
+
+exports[`AppButton size "lg" 1`] = `
+<button
+  class="btn btn-sm btn-lg"
+>
+  
+  
+</button>
+`;
+
+exports[`AppButton size "sm" 1`] = `
+<button
+  class="btn btn-sm btn-sm"
+>
+  
+  
+</button>
+`;
+
+exports[`AppButton size "xl" 1`] = `
+<button
+  class="btn btn-sm btn-xl"
+>
+  
+  
+</button>
+`;
+
+exports[`AppButton size "xs" 1`] = `
+<button
+  class="btn btn-sm btn-xs"
+>
+  
+  
+</button>
+`;

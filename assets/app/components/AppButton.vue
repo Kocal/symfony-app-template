@@ -10,7 +10,6 @@
 </template>
 
 <script lang="ts">
-import { useRouter } from '@app/hooks';
 import { computed, defineComponent } from 'vue';
 
 export default defineComponent({

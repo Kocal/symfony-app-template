@@ -1,13 +1,13 @@
 import { mount } from '@vue/test-utils';
-import Button from '@app/components/AppButton';
+import Button from '@app/components/AppButton.vue';
 
-describe('button', () => {
+describe('appButton', () => {
   it('default render', () => {
     expect.assertions(1);
 
     const wrapper = mount(Button);
 
-    expect(wrapper.html()).toBe('<button class="btn btn-sm btn-primary"></button>');
+    expect(wrapper.html()).toMatchInlineSnapshot(`<button class="btn btn-sm btn-primary"></button>`);
   });
 
   it.each(['xs', 'sm', 'lg', 'xl'])('size "%s"', (color) => {
@@ -55,7 +55,9 @@ describe('button', () => {
       },
     });
 
-    expect(wrapper.html()).toBe(`<button disabled="disabled" class="btn btn-sm btn-primary disabled"></button>`);
+    expect(wrapper.html()).toMatchInlineSnapshot(
+      `<button disabled="" class="btn btn-sm btn-primary disabled"></button>`
+    );
   });
 
   it('loading', () => {
@@ -67,7 +69,11 @@ describe('button', () => {
       },
     });
 
-    expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchInlineSnapshot(`
+      <button class="btn btn-sm btn-primary btn-loading">
+        <div class="loading"><i class="fa fa-spinner-third fa-spin"></i></div>
+      </button>
+    `);
   });
 
   it('complex render', () => {
@@ -85,6 +91,10 @@ describe('button', () => {
       },
     });
 
-    expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchInlineSnapshot(`
+      <button disabled="" class="btn btn-xl btn-success btn-loading btn-icon disabled btn-outline btn-auto">
+        <div class="loading"><i class="fa fa-spinner-third fa-spin"></i></div>
+      </button>
+    `);
   });
 });
