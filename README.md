@@ -8,7 +8,7 @@
 - API Platform
 - TailwindCSS (mode JIT) et le plugin pour les formulaires
 - Webpack Encore, Babel, TypeScript, Vue, JSX
-- PHPStan, PHP-CS-Fixer, PHP_CodeSniffer, ESLint, Prettier
+- PHPStan, PHP-CS-Fixer, PHP_CodeSniffer, Rector, ESLint, Prettier
 - PHPUnit, phpspec, Cypress, Jest (avec le support de Vue & JSX)
 - Hooks de pré-commit via Husky et lint-staged
 - Sentry (PHP et JS) configuré
