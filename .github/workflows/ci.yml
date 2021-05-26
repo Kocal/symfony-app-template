@@ -60,6 +60,7 @@ jobs:
             - run: symfony php bin/php-cs-fixer fix --verbose --diff --dry-run
             - run: symfony php bin/phpcs
             - run: symfony php bin/phpstan analyse
+            - run: symfony php bin/rectore process --dry-run
             - run: APP_ENV=test symfony php bin/phpunit # See https://github.com/symfony/symfony-docs/pull/15228
             - run: symfony php bin/phpspec run
 
