@@ -2,11 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\EventListener;
+namespace App\EventSubscriber;
 
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
+use Symfony\Component\HttpKernel\KernelEvents;
 
-class JsonRequestDecoderListener
+class JsonRequestDecoderEventSubscriber implements EventSubscriberInterface
 {
     public function onKernelRequest(RequestEvent $event): void
     {
@@ -19,5 +21,10 @@ class JsonRequestDecoderListener
                 $request->request->replace($data);
             }
         }
+    }
+
+    public static function getSubscribedEvents(): array
+    {
+        return [KernelEvents::REQUEST => ['onKernelRequest', 255]];
     }
 }
