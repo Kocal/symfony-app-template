@@ -7,13 +7,12 @@
 </template>
 
 <script lang="ts">
-import AppButton from '@app/components/AppButton';
-import { Component, Vue } from 'vue-property-decorator';
+import AppButton from '@app/components/AppButton.vue';
+import { defineComponent } from 'vue';
 
-@Component({
+export default defineComponent({
   components: {
     AppButton,
   },
-})
-export default class App extends Vue {}
+});
 </script>

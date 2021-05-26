@@ -1,7 +1,17 @@
-import Vue from 'vue';
-import * as Sentry from '@sentry/vue';
+import * as Sentry from '@sentry/browser';
 
-Sentry.init({
-  dsn: process.env.SENTRY_DSN,
-  Vue,
-});
+let initialized = false;
+
+export function initSentry(): void {
+  Sentry.init({
+    dsn: process.env.SENTRY_DSN,
+  });
+  initialized = true;
+}
+
+export function getSentry(): typeof Sentry {
+  if (!initialized) {
+    throw new Error('Sentry has not been initialized, you must call `initSentry()` before.');
+  }
+  return Sentry;
+}
