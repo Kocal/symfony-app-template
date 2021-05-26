@@ -2169,16 +2169,16 @@
         },
         {
             "name": "jean85/pretty-package-versions",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jean85/pretty-package-versions.git",
-                "reference": "b2c4ec2033a0196317a467cb197c7c843b794ddf"
+                "reference": "694492c653c518456af2805f04eec445b997ed1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/b2c4ec2033a0196317a467cb197c7c843b794ddf",
-                "reference": "b2c4ec2033a0196317a467cb197c7c843b794ddf",
+                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/694492c653c518456af2805f04eec445b997ed1f",
+                "reference": "694492c653c518456af2805f04eec445b997ed1f",
                 "shasum": ""
             },
             "require": {
@@ -2222,9 +2222,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Jean85/pretty-package-versions/issues",
-                "source": "https://github.com/Jean85/pretty-package-versions/tree/2.0.3"
+                "source": "https://github.com/Jean85/pretty-package-versions/tree/2.0.4"
             },
-            "time": "2021-02-22T10:52:38+00:00"
+            "time": "2021-05-26T08:46:42+00:00"
         },
         {
             "name": "knplabs/doctrine-behaviors",
@@ -3359,16 +3359,16 @@
         },
         {
             "name": "php-http/message",
-            "version": "1.11.0",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/message.git",
-                "reference": "fb0dbce7355cad4f4f6a225f537c34d013571f29"
+                "reference": "887734d9c515ad9a564f6581a682fff87a6253cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/message/zipball/fb0dbce7355cad4f4f6a225f537c34d013571f29",
-                "reference": "fb0dbce7355cad4f4f6a225f537c34d013571f29",
+                "url": "https://api.github.com/repos/php-http/message/zipball/887734d9c515ad9a564f6581a682fff87a6253cc",
+                "reference": "887734d9c515ad9a564f6581a682fff87a6253cc",
                 "shasum": ""
             },
             "require": {
@@ -3427,9 +3427,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/message/issues",
-                "source": "https://github.com/php-http/message/tree/1.11.0"
+                "source": "https://github.com/php-http/message/tree/1.11.1"
             },
-            "time": "2021-02-01T08:54:58+00:00"
+            "time": "2021-05-24T18:11:08+00:00"
         },
         {
             "name": "php-http/message-factory",
@@ -4597,16 +4597,16 @@
         },
         {
             "name": "sentry/sentry",
-            "version": "3.2.2",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getsentry/sentry-php.git",
-                "reference": "02237728bdc5b82b0a14c37417644e3f3606db9b"
+                "reference": "3bb122f9fc2bc43a4646e37db79eaf115b35b047"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/02237728bdc5b82b0a14c37417644e3f3606db9b",
-                "reference": "02237728bdc5b82b0a14c37417644e3f3606db9b",
+                "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/3bb122f9fc2bc43a4646e37db79eaf115b35b047",
+                "reference": "3bb122f9fc2bc43a4646e37db79eaf115b35b047",
                 "shasum": ""
             },
             "require": {
@@ -4651,7 +4651,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2.x-dev"
+                    "dev-master": "3.3.x-dev"
                 }
             },
             "autoload": {
@@ -4685,7 +4685,7 @@
             ],
             "support": {
                 "issues": "https://github.com/getsentry/sentry-php/issues",
-                "source": "https://github.com/getsentry/sentry-php/tree/3.2.2"
+                "source": "https://github.com/getsentry/sentry-php/tree/3.3.0"
             },
             "funding": [
                 {
@@ -4697,20 +4697,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-05-06T10:15:01+00:00"
+            "time": "2021-05-25T18:32:24+00:00"
         },
         {
             "name": "sentry/sentry-symfony",
-            "version": "4.1.1",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getsentry/sentry-symfony.git",
-                "reference": "1a4080a3153a20dc9217571104951647d822f92d"
+                "reference": "93a357af39994b846aa9c6280c8e44a1e2739e27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getsentry/sentry-symfony/zipball/1a4080a3153a20dc9217571104951647d822f92d",
-                "reference": "1a4080a3153a20dc9217571104951647d822f92d",
+                "url": "https://api.github.com/repos/getsentry/sentry-symfony/zipball/93a357af39994b846aa9c6280c8e44a1e2739e27",
+                "reference": "93a357af39994b846aa9c6280c8e44a1e2739e27",
                 "shasum": ""
             },
             "require": {
@@ -4798,7 +4798,7 @@
             ],
             "support": {
                 "issues": "https://github.com/getsentry/sentry-symfony/issues",
-                "source": "https://github.com/getsentry/sentry-symfony/tree/4.1.1"
+                "source": "https://github.com/getsentry/sentry-symfony/tree/4.1.2"
             },
             "funding": [
                 {
@@ -4810,7 +4810,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-05-10T07:39:23+00:00"
+            "time": "2021-05-16T22:44:16+00:00"
         },
         {
             "name": "snc/redis-bundle",
