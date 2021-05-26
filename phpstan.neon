@@ -27,6 +27,7 @@ parameters:
         - tests/phpspec
     bootstrapFiles:
         - vendor-bin/phpunit/vendor/autoload.php
+        - vendor-bin/rector/vendor/autoload.php
 
     inferPrivatePropertyTypeFromConstructor: true
 
