@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\BadCredentialsException;
 use Symfony\Component\Security\Core\Exception\InvalidCsrfTokenException;
+use Symfony\Component\Security\Core\Exception\UserNotFoundException;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -58,16 +59,18 @@ class FormAuthenticator extends AbstractFormLoginAuthenticator
             throw new InvalidCsrfTokenException();
         }
 
-        $user = $this->userProvider->loadUserByIdentifier($credentials['email']);
-        if (null === $user) {
+        try {
+            $user = $this->userProvider->loadUserByIdentifier($credentials['email']);
+        } catch (UserNotFoundException $e) {
             throw new BadCredentialsException();
         }
 
         return $user;
     }
 
-    public function checkCredentials($credentials, UserInterface|PasswordAuthenticatedUserInterface $user)
+    public function checkCredentials($credentials, UserInterface $user): bool
     {
+        /** @var PasswordAuthenticatedUserInterface $user */
         return $this->passwordHasher->isPasswordValid($user, $credentials['password']);
     }
 

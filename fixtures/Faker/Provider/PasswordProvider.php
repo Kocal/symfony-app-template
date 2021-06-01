@@ -5,19 +5,16 @@ declare(strict_types=1);
 namespace Fixtures\Faker\Provider;
 
 use App\Entity\User;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class PasswordProvider
 {
-    private $passwordEncoder;
-
-    public function __construct(UserPasswordEncoderInterface $passwordEncoder)
+    public function __construct(private UserPasswordHasherInterface $passwordHasher)
     {
-        $this->passwordEncoder = $passwordEncoder;
     }
 
     public function encodePassword(User $user, string $wordToEncode): string
     {
-        return $this->passwordEncoder->encodePassword($user, $wordToEncode);
+        return $this->passwordHasher->hashPassword($user, $wordToEncode);
     }
 }
