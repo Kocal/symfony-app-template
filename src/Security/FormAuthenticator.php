@@ -14,7 +14,6 @@ use Symfony\Component\Security\Core\Exception\BadCredentialsException;
 use Symfony\Component\Security\Core\Exception\InvalidCsrfTokenException;
 use Symfony\Component\Security\Core\Exception\UserNotFoundException;
 use Symfony\Component\Security\Core\Security;
-use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Csrf\CsrfToken;
@@ -70,8 +69,7 @@ class FormAuthenticator extends AbstractFormLoginAuthenticator
 
     public function checkCredentials($credentials, UserInterface $user): bool
     {
-        /** @var PasswordAuthenticatedUserInterface $user */
-        return $this->passwordHasher->isPasswordValid($user, $credentials['password']);
+        return $this->passwordHasher->isPasswordValid($user, $credentials['password']); // @phpstan-ignore-line
     }
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $providerKey): Response
