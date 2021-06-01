@@ -4,28 +4,26 @@ declare(strict_types=1);
 
 namespace App\Twig;
 
+use RuntimeException;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
 class EncoreExtension extends AbstractExtension
 {
-    private $publicDir;
-
-    public function __construct(string $publicDir)
+    public function __construct(private string $publicDir)
     {
-        $this->publicDir = $publicDir;
     }
 
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('encore_source', [$this, 'source']),
+            new TwigFunction('encore_source', fn (string $path): string => $this->source($path)),
         ];
     }
 
     public function source(string $path): string
     {
-        if (0 === strpos($path, '/')) {
+        if (str_starts_with($path, '/')) {
             $path = $this->publicDir.$path;
         }
 
@@ -33,6 +31,6 @@ class EncoreExtension extends AbstractExtension
             return $content;
         }
 
-        throw new \RuntimeException("Unable to read file \"$path\".");
+        throw new RuntimeException(sprintf('Unable to read file "%s".', $path));
     }
 }

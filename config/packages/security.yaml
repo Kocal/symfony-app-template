@@ -23,8 +23,8 @@ security:
                 authenticators:
                     - App\Security\FormAuthenticator
             logout:
-                path: app_logout
-                target: app_login
+                path: !php/const App\ValueObject\Routing\RouteName::APP_LOGOUT
+                target: !php/const App\ValueObject\Routing\RouteName::APP_LOGIN
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used

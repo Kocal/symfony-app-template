@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Security;
 
+use App\ValueObject\Routing\RouteName;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -35,7 +36,7 @@ class FormAuthenticator extends AbstractFormLoginAuthenticator
 
     public function supports(Request $request)
     {
-        return 'app_login' === $request->attributes->get('_route') && $request->isMethod('POST');
+        return RouteName::APP_LOGIN === $request->attributes->get('_route') && $request->isMethod('POST');
     }
 
     public function getCredentials(Request $request)
@@ -60,7 +61,7 @@ class FormAuthenticator extends AbstractFormLoginAuthenticator
 
         try {
             $user = $this->userProvider->loadUserByIdentifier($credentials['email']);
-        } catch (UserNotFoundException $e) {
+        } catch (UserNotFoundException) {
             throw new BadCredentialsException();
         }
 
@@ -78,11 +79,11 @@ class FormAuthenticator extends AbstractFormLoginAuthenticator
             return new RedirectResponse($targetPath);
         }
 
-        return new RedirectResponse($this->urlGenerator->generate('home'));
+        return new RedirectResponse($this->urlGenerator->generate(RouteName::HOME));
     }
 
     protected function getLoginUrl(): string
     {
-        return $this->urlGenerator->generate('app_login');
+        return $this->urlGenerator->generate(RouteName::APP_LOGIN);
     }
 }

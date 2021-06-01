@@ -28,7 +28,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, Timesta
      * @var int|null
      *
      * @ORM\Id()
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
