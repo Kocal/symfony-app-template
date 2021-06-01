@@ -1,9 +1,9 @@
 includes:
-    - vendor-bin/phpstan/vendor/phpstan/phpstan-strict-rules/rules.neon
-    - vendor-bin/phpstan/vendor/phpstan/phpstan-symfony/extension.neon
-    - vendor-bin/phpstan/vendor/phpstan/phpstan-doctrine/extension.neon
-    - vendor-bin/phpstan/vendor/phpstan/phpstan-phpunit/extension.neon
-    - vendor-bin/phpstan/vendor/phpstan/phpstan-phpunit/rules.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+    - vendor/phpstan/phpstan-symfony/extension.neon
+    - vendor/phpstan/phpstan-doctrine/extension.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
     - vendor/knplabs/doctrine-behaviors/phpstan-extension.neon
 
 parameters:
@@ -27,7 +27,6 @@ parameters:
         - tests/phpspec
     bootstrapFiles:
         - vendor-bin/phpunit/vendor/autoload.php
-        - vendor-bin/rector/vendor/autoload.php
 
     inferPrivatePropertyTypeFromConstructor: true
 

@@ -1,5 +1,7 @@
 security:
-    encoders:
+    enable_authenticator_manager: true
+
+    password_hashers:
         App\Entity\User:
             algorithm: auto
 
@@ -16,21 +18,20 @@ security:
             security: false
 
         main:
-            anonymous: true
             lazy: true
             guard:
                 authenticators:
                     - App\Security\FormAuthenticator
             logout:
-                path: app_logout
-                target: app_login
+                path: !php/const App\ValueObject\Routing\RouteName::APP_LOGOUT
+                target: !php/const App\ValueObject\Routing\RouteName::APP_LOGIN
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/_debug, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/translations, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/_debug, roles: PUBLIC_ACCESS }
+        - { path: ^/translations, roles: PUBLIC_ACCESS }
         - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login, roles: PUBLIC_ACCESS }
         - { path: ^/, roles: ROLE_USER }
         # - { path: ^/profile, roles: ROLE_USER }

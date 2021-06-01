@@ -285,6 +285,21 @@
     "php-translation/symfony-storage": {
         "version": "2.2.0"
     },
+    "phpstan/phpstan": {
+        "version": "0.12.88"
+    },
+    "phpstan/phpstan-doctrine": {
+        "version": "0.12.38"
+    },
+    "phpstan/phpstan-phpunit": {
+        "version": "0.12.19"
+    },
+    "phpstan/phpstan-strict-rules": {
+        "version": "0.12.9"
+    },
+    "phpstan/phpstan-symfony": {
+        "version": "0.12.34"
+    },
     "predis/predis": {
         "version": "v1.1.1"
     },
@@ -320,6 +335,9 @@
     },
     "ramsey/uuid": {
         "version": "3.9.3"
+    },
+    "rector/rector": {
+        "version": "0.11.7"
     },
     "sebastian/comparator": {
         "version": "3.0.2"
