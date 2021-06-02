@@ -1,6 +1,7 @@
 module.exports = {
   bail: true,
   verbose: !process.env.CI,
+  testEnvironment: 'jsdom',
   moduleFileExtensions: require('./.eslintrc').settings['import/extensions'].map((e) => e.replace('.', '')), // eslint-disable-line global-require
   transform: {
     '^.+\\.(j|t)sx?$': 'babel-jest',

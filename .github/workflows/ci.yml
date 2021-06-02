@@ -105,6 +105,9 @@ jobs:
             - run: yarn lint:js --no-fix
             - run: yarn lint:css --no-fix
 
+            # Tests
+            - run: yarn test:unit
+
             # Build assets for dev and prod
             - run: yarn dev
             - run: yarn prod
