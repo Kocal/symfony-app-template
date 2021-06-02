@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import Button from '@app/components/AppButton.vue';
 
-describe('AppButton', () => {
+describe('appButton', () => {
   it('default render', () => {
     expect.assertions(1);
 

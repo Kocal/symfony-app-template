@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppButton color "danger" 1`] = `
+exports[`appButton color "danger" 1`] = `
 <button
   class="btn btn-sm btn-danger"
 >
@@ -9,7 +9,7 @@ exports[`AppButton color "danger" 1`] = `
 </button>
 `;
 
-exports[`AppButton color "primary" 1`] = `
+exports[`appButton color "primary" 1`] = `
 <button
   class="btn btn-sm btn-primary"
 >
@@ -18,7 +18,7 @@ exports[`AppButton color "primary" 1`] = `
 </button>
 `;
 
-exports[`AppButton color "success" 1`] = `
+exports[`appButton color "success" 1`] = `
 <button
   class="btn btn-sm btn-success"
 >
@@ -27,7 +27,7 @@ exports[`AppButton color "success" 1`] = `
 </button>
 `;
 
-exports[`AppButton size "lg" 1`] = `
+exports[`appButton size "lg" 1`] = `
 <button
   class="btn btn-sm btn-lg"
 >
@@ -36,7 +36,7 @@ exports[`AppButton size "lg" 1`] = `
 </button>
 `;
 
-exports[`AppButton size "sm" 1`] = `
+exports[`appButton size "sm" 1`] = `
 <button
   class="btn btn-sm btn-sm"
 >
@@ -45,7 +45,7 @@ exports[`AppButton size "sm" 1`] = `
 </button>
 `;
 
-exports[`AppButton size "xl" 1`] = `
+exports[`appButton size "xl" 1`] = `
 <button
   class="btn btn-sm btn-xl"
 >
@@ -54,7 +54,7 @@ exports[`AppButton size "xl" 1`] = `
 </button>
 `;
 
-exports[`AppButton size "xs" 1`] = `
+exports[`appButton size "xs" 1`] = `
 <button
   class="btn btn-sm btn-xs"
 >
