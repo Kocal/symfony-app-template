@@ -58,6 +58,9 @@ Encore
   .enableVersioning(Encore.isProduction())
   .disableCssExtraction(Encore.isDevServer())
 
+  // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
+  .enableStimulusBridge('./assets/controllers.json')
+
   // enables Vue support
   .enableVueLoader((vueLoaderOptions) => {
     // Remove attributes `data-testid` and `:data-testid` when building for production.
