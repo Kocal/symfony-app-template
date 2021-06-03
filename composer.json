@@ -36,6 +36,7 @@
     "symfony/mailgun-mailer": "*",
     "symfony/monolog-bundle": "^3.5",
     "symfony/process": "*",
+    "symfony/runtime": "*",
     "symfony/security-bundle": "*",
     "symfony/serializer": "*",
     "symfony/translation": "*",

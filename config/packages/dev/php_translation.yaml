@@ -2,6 +2,7 @@ translation:
     locales: ['%locale%']
     edit_in_place:
         enabled: false
+        config_name: app
     symfony_profiler:
         enabled: true
     webui:

@@ -8,6 +8,7 @@
 - API Platform
 - TailwindCSS (mode JIT) et le plugin pour les formulaires
 - Webpack Encore, Babel, TypeScript, Vue, JSX
+- Symfony UX (Stimulus Bridge)
 - PHPStan, PHP-CS-Fixer, PHP_CodeSniffer, Rector, ESLint, Prettier
 - PHPUnit, phpspec, Cypress, Jest (avec le support de Vue & JSX)
 - Hooks de pré-commit via Husky et lint-staged
@@ -21,6 +22,7 @@
   - Modifier les badges GitHub Actions
   - Modifier les liens d'accès à l'application en local, pre-prod et prod
 - Remplacer le fichier `README.md` par le fichier `README_APP.md`
+- Modifier le contenu de la variable `APP_ENV` du fichier `.env`
 
 ---
 
