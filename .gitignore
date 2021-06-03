@@ -16,6 +16,7 @@
 /.env.*.local
 /bin/*
 !/bin/console
+!/bin/phpunit
 !/bin/dump-translations.sh
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
@@ -33,7 +34,6 @@ yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
 ###> symfony/phpunit-bridge ###
-.phpunit
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
