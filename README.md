@@ -21,6 +21,7 @@
   - Modifier les badges GitHub Actions
   - Modifier les liens d'accès à l'application en local, pre-prod et prod
 - Remplacer le fichier `README.md` par le fichier `README_APP.md`
+- Modifier le contenu de la variable `APP_ENV` du fichier `.env`
 
 ---
 

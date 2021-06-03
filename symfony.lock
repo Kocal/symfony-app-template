@@ -487,19 +487,18 @@
         "version": "v5.0.4"
     },
     "symfony/framework-bundle": {
-        "version": "5.1",
+        "version": "5.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "master",
-            "version": "5.1",
-            "ref": "6ee1194b036378b21884e7f57b6a2ac721167f16"
+            "version": "5.3",
+            "ref": "8af7647cd89416f68e41df5c343a5e531d2bf025"
         },
         "files": [
             "config/packages/cache.yaml",
             "config/packages/framework.yaml",
-            "config/packages/test/framework.yaml",
             "config/preload.php",
-            "config/routes/dev/framework.yaml",
+            "config/routes/framework.yaml",
             "config/services.yaml",
             "public/index.php",
             "src/Controller/.gitignore",
@@ -578,6 +577,9 @@
     "symfony/orm-pack": {
         "version": "v1.0.8"
     },
+    "symfony/password-hasher": {
+        "version": "v5.3.0"
+    },
     "symfony/phpunit-bridge": {
         "version": "4.3",
         "recipe": {
@@ -617,6 +619,9 @@
     "symfony/polyfill-php80": {
         "version": "v1.17.0"
     },
+    "symfony/polyfill-php81": {
+        "version": "v1.23.0"
+    },
     "symfony/polyfill-uuid": {
         "version": "v1.22.1"
     },
@@ -648,6 +653,9 @@
             "config/packages/routing.yaml",
             "config/routes.yaml"
         ]
+    },
+    "symfony/runtime": {
+        "version": "v5.3.0"
     },
     "symfony/security-bundle": {
         "version": "5.1",
