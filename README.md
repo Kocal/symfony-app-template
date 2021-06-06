@@ -13,7 +13,7 @@
 - PHPUnit, phpspec, Cypress, Jest (avec le support de Vue & JSX)
 - Hooks de pré-commit via Husky et lint-staged
 - Sentry (PHP et JS) configuré
-- GitHub Actions configuré
+- GitHub Actions et Dependabot (auto-approve & auto-merge) configurés 
 
 ## Utiliser ce template
 
