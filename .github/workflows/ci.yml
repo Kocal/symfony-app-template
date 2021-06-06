@@ -3,15 +3,24 @@ name: CI
 on:
     pull_request:
         types: [opened, synchronize, reopened, ready_for_review]
+    pull_request_target:
+        types: [opened, synchronize, reopened, ready_for_review]
 
 env:
     TZ: UTC
 
 jobs:
     php:
+        # If the PR is coming from a fork (pull_request_target), ensure it's opened by "dependabot[bot]".
+        # Otherwise, clone it normally.
+        if: |
+            (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]') ||
+            (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]')
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.sha || '' }}
 
             - uses: ./.github/actions/setup-environment
 
@@ -65,9 +74,16 @@ jobs:
             - run: symfony php bin/phpspec run
 
     javascript:
+        # If the PR is coming from a fork (pull_request_target), ensure it's opened by "dependabot[bot]".
+        # Otherwise, clone it normally.
+        if: |
+            (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]') ||
+            (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]')
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.sha || '' }}
 
             - uses: ./.github/actions/setup-environment
 
@@ -113,6 +129,11 @@ jobs:
             - run: yarn prod
 
     cypress:
+        # If the PR is coming from a fork (pull_request_target), ensure it's opened by "dependabot[bot]".
+        # Otherwise, clone it normally.
+        if: |
+            (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]') ||
+            (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]')
         runs-on: ubuntu-latest
         name: cypress (${{ matrix.cypress.group }})
         strategy:
@@ -125,6 +146,8 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.sha || '' }}
 
             - uses: ./.github/actions/setup-environment
 
