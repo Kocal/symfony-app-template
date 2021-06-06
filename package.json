@@ -76,7 +76,7 @@
     "bazinga-translator": "^4.0.1",
     "date-fns": "^2.19.0",
     "foundation-emails": "^2.3.1",
-    "intl-messageformat": "^9.6.16",
+    "intl-messageformat": "^9.6.18",
     "symfony-ts-router": "Kocal/symfony-ts-router#tokens-boolean-dist",
     "tailwindcss": "^2.1.4",
     "vue": "^3.0.11"
