@@ -34,7 +34,7 @@
     "@kocal/eslint-config-generator-plugin-vue": "^2.0.2",
     "@symfony/webpack-encore": "^1.3.0",
     "@types/jest": "^26.0.22",
-    "@vue/compiler-sfc": "^3.0.11",
+    "@vue/compiler-sfc": "^3.1.0",
     "@vue/test-utils": "^2.0.0-rc.6",
     "babel-jest": "^27.0.2",
     "chai-subset": "^1.6.0",
@@ -42,7 +42,7 @@
     "core-js": "^3.10.0",
     "cypress": "^7.0.0",
     "dotenv": "^10.0.0",
-    "eslint": "^7.23.0",
+    "eslint": "^7.28.0",
     "eslint-plugin-chai-friendly": "^0.7.1",
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-jest": "^24.3.6",
@@ -79,6 +79,6 @@
     "intl-messageformat": "^9.6.18",
     "symfony-ts-router": "Kocal/symfony-ts-router#tokens-boolean-dist",
     "tailwindcss": "^2.1.4",
-    "vue": "^3.0.11"
+    "vue": "^3.1.0"
   }
 }
