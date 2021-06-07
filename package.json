@@ -39,7 +39,7 @@
     "babel-jest": "^27.0.2",
     "chai-subset": "^1.6.0",
     "chai-subset-jest-diff": "^1.0.0",
-    "core-js": "^3.10.0",
+    "core-js": "^3.14.0",
     "cypress": "^7.0.0",
     "dotenv": "^10.0.0",
     "eslint": "^7.28.0",
