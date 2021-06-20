@@ -75,6 +75,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, Timesta
         return (string) $this->email;
     }
 
+    public function getUsername(): string
+    {
+        return $this->getUserIdentifier();
+    }
+
     /**
      * {@inheritdoc}
      */
