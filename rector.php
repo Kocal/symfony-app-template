@@ -19,6 +19,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ],
     ]);
     $parameters->set(Option::AUTO_IMPORT_NAMES, true);
+    $parameters->set(Option::BOOTSTRAP_FILES, [
+        __DIR__.'/vendor-bin/phpunit/vendor/autoload.php',
+        __DIR__.'/vendor-bin/phpspec/vendor/autoload.php',
+    ]);
 
     // Define what rule sets will be applied
     $containerConfigurator->import(SetList::PHP_80);
