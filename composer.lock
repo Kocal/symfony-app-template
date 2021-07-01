@@ -3235,16 +3235,16 @@
         },
         {
             "name": "php-http/discovery",
-            "version": "1.13.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/discovery.git",
-                "reference": "788f72d64c43dc361e7fcc7464c3d947c64984a7"
+                "reference": "778f722e29250c1fac0bbdef2c122fa5d038c9eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/discovery/zipball/788f72d64c43dc361e7fcc7464c3d947c64984a7",
-                "reference": "788f72d64c43dc361e7fcc7464c3d947c64984a7",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/778f722e29250c1fac0bbdef2c122fa5d038c9eb",
+                "reference": "778f722e29250c1fac0bbdef2c122fa5d038c9eb",
                 "shasum": ""
             },
             "require": {
@@ -3261,8 +3261,7 @@
                 "puli/composer-plugin": "1.0.0-beta10"
             },
             "suggest": {
-                "php-http/message": "Allow to use Guzzle, Diactoros or Slim Framework factories",
-                "puli/composer-plugin": "Sets up Puli which is recommended for Discovery to work. Check http://docs.php-http.org/en/latest/discovery.html for more details."
+                "php-http/message": "Allow to use Guzzle, Diactoros or Slim Framework factories"
             },
             "type": "library",
             "extra": {
@@ -3298,9 +3297,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/discovery/issues",
-                "source": "https://github.com/php-http/discovery/tree/1.13.0"
+                "source": "https://github.com/php-http/discovery/tree/1.14.0"
             },
-            "time": "2020-11-27T14:49:42+00:00"
+            "time": "2021-06-01T14:30:21+00:00"
         },
         {
             "name": "php-http/httplug",
@@ -4604,16 +4603,16 @@
         },
         {
             "name": "sentry/sentry",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getsentry/sentry-php.git",
-                "reference": "3bb122f9fc2bc43a4646e37db79eaf115b35b047"
+                "reference": "fafef24c1bc242e614a1afd9533d5dcb7e9c42fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/3bb122f9fc2bc43a4646e37db79eaf115b35b047",
-                "reference": "3bb122f9fc2bc43a4646e37db79eaf115b35b047",
+                "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/fafef24c1bc242e614a1afd9533d5dcb7e9c42fe",
+                "reference": "fafef24c1bc242e614a1afd9533d5dcb7e9c42fe",
                 "shasum": ""
             },
             "require": {
@@ -4692,7 +4691,7 @@
             ],
             "support": {
                 "issues": "https://github.com/getsentry/sentry-php/issues",
-                "source": "https://github.com/getsentry/sentry-php/tree/3.3.0"
+                "source": "https://github.com/getsentry/sentry-php/tree/3.3.1"
             },
             "funding": [
                 {
@@ -4704,20 +4703,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-05-25T18:32:24+00:00"
+            "time": "2021-06-19T11:37:25+00:00"
         },
         {
             "name": "sentry/sentry-symfony",
-            "version": "4.1.3",
+            "version": "4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getsentry/sentry-symfony.git",
-                "reference": "d0b85df21f65499db87341648541a526a1f7960d"
+                "reference": "6265b27867210a4cc34f0d75e5f1b92af627830b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getsentry/sentry-symfony/zipball/d0b85df21f65499db87341648541a526a1f7960d",
-                "reference": "d0b85df21f65499db87341648541a526a1f7960d",
+                "url": "https://api.github.com/repos/getsentry/sentry-symfony/zipball/6265b27867210a4cc34f0d75e5f1b92af627830b",
+                "reference": "6265b27867210a4cc34f0d75e5f1b92af627830b",
                 "shasum": ""
             },
             "require": {
@@ -4805,7 +4804,7 @@
             ],
             "support": {
                 "issues": "https://github.com/getsentry/sentry-symfony/issues",
-                "source": "https://github.com/getsentry/sentry-symfony/tree/4.1.3"
+                "source": "https://github.com/getsentry/sentry-symfony/tree/4.1.4"
             },
             "funding": [
                 {
@@ -4817,7 +4816,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-05-31T07:54:49+00:00"
+            "time": "2021-06-18T11:07:00+00:00"
         },
         {
             "name": "snc/redis-bundle",
@@ -11538,16 +11537,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.88",
+            "version": "0.12.90",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "464d1a81af49409c41074aa6640ed0c4cbd9bb68"
+                "reference": "f0e4b56630fc3d4eb5be86606d07212ac212ede4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/464d1a81af49409c41074aa6640ed0c4cbd9bb68",
-                "reference": "464d1a81af49409c41074aa6640ed0c4cbd9bb68",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f0e4b56630fc3d4eb5be86606d07212ac212ede4",
+                "reference": "f0e4b56630fc3d4eb5be86606d07212ac212ede4",
                 "shasum": ""
             },
             "require": {
@@ -11578,11 +11577,15 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/0.12.88"
+                "source": "https://github.com/phpstan/phpstan/tree/0.12.90"
             },
             "funding": [
                 {
                     "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
                     "type": "github"
                 },
                 {
@@ -11594,20 +11597,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-17T12:24:49+00:00"
+            "time": "2021-06-18T07:15:38+00:00"
         },
         {
             "name": "phpstan/phpstan-doctrine",
-            "version": "0.12.39",
+            "version": "0.12.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-doctrine.git",
-                "reference": "c35261fe7fe54bd0338c7ab43e85db20b7dc483c"
+                "reference": "553279066d733a9c223fe2981f3493687c9fed5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-doctrine/zipball/c35261fe7fe54bd0338c7ab43e85db20b7dc483c",
-                "reference": "c35261fe7fe54bd0338c7ab43e85db20b7dc483c",
+                "url": "https://api.github.com/repos/phpstan/phpstan-doctrine/zipball/553279066d733a9c223fe2981f3493687c9fed5c",
+                "reference": "553279066d733a9c223fe2981f3493687c9fed5c",
                 "shasum": ""
             },
             "require": {
@@ -11660,9 +11663,9 @@
             "description": "Doctrine extensions for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-doctrine/issues",
-                "source": "https://github.com/phpstan/phpstan-doctrine/tree/0.12.39"
+                "source": "https://github.com/phpstan/phpstan-doctrine/tree/0.12.40"
             },
-            "time": "2021-06-10T12:42:07+00:00"
+            "time": "2021-07-01T07:48:56+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -11771,16 +11774,16 @@
         },
         {
             "name": "phpstan/phpstan-symfony",
-            "version": "0.12.37",
+            "version": "0.12.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-symfony.git",
-                "reference": "45e2ae29f6f53f5039b3d5c401dfc26724d8f5bb"
+                "reference": "58b5959a11e26ce495b424ee634e721aaa9674d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-symfony/zipball/45e2ae29f6f53f5039b3d5c401dfc26724d8f5bb",
-                "reference": "45e2ae29f6f53f5039b3d5c401dfc26724d8f5bb",
+                "url": "https://api.github.com/repos/phpstan/phpstan-symfony/zipball/58b5959a11e26ce495b424ee634e721aaa9674d1",
+                "reference": "58b5959a11e26ce495b424ee634e721aaa9674d1",
                 "shasum": ""
             },
             "require": {
@@ -11834,27 +11837,27 @@
             "description": "Symfony Framework extensions and rules for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-symfony/issues",
-                "source": "https://github.com/phpstan/phpstan-symfony/tree/0.12.37"
+                "source": "https://github.com/phpstan/phpstan-symfony/tree/0.12.38"
             },
-            "time": "2021-06-16T13:00:16+00:00"
+            "time": "2021-07-01T07:35:09+00:00"
         },
         {
             "name": "rector/rector",
-            "version": "0.11.7",
+            "version": "0.11.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "d009bac6f03d19e4ef14f3f05c70c4dbdea17726"
+                "reference": "cbc812647c9c9877c5c5a65435111009e8799f70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/d009bac6f03d19e4ef14f3f05c70c4dbdea17726",
-                "reference": "d009bac6f03d19e4ef14f3f05c70c4dbdea17726",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/cbc812647c9c9877c5c5a65435111009e8799f70",
+                "reference": "cbc812647c9c9877c5c5a65435111009e8799f70",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1|^8.0",
-                "phpstan/phpstan": ">=0.12.86 <=0.12.88"
+                "phpstan/phpstan": ">=0.12.86 <=0.12.90"
             },
             "conflict": {
                 "phpstan/phpdoc-parser": "<=0.5.3",
@@ -11862,7 +11865,6 @@
                 "rector/rector-cakephp": "*",
                 "rector/rector-doctrine": "*",
                 "rector/rector-nette": "*",
-                "rector/rector-nette-to-symfony": "*",
                 "rector/rector-phpunit": "*",
                 "rector/rector-prefixed": "*",
                 "rector/rector-symfony": "*"
@@ -11888,7 +11890,7 @@
             "description": "Prefixed and PHP 7.1 downgraded version of rector/rector",
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.11.7"
+                "source": "https://github.com/rectorphp/rector/tree/0.11.32"
             },
             "funding": [
                 {
@@ -11896,7 +11898,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-29T19:51:43+00:00"
+            "time": "2021-06-30T22:19:56+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -12845,5 +12847,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
