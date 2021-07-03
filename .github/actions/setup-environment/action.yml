@@ -19,11 +19,3 @@ runs:
 
         - run: echo "COMPOSER_CACHE_DIR=${{ steps.composer-cache.outputs.dir }}" >> $GITHUB_ENV
           shell: bash
-
-        # Yarn cache
-        - id: yarn-cache-dir
-          run: echo "::set-output name=dir::$(yarn cache dir)"
-          shell: bash
-
-        - run: echo "YARN_CACHE_DIR=${{ steps.yarn-cache-dir.outputs.dir }}" >> $GITHUB_ENV
-          shell: bash
