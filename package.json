@@ -78,7 +78,7 @@
     "foundation-emails": "^2.3.1",
     "intl-messageformat": "^9.6.18",
     "symfony-ts-router": "Kocal/symfony-ts-router#tokens-boolean-dist",
-    "tailwindcss": "^2.1.4",
+    "tailwindcss": "^2.2.7",
     "vue": "^3.1.0"
   }
 }
