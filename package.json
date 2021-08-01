@@ -65,7 +65,7 @@
     "ts-jest": "^27.0.2",
     "typescript": "^4.2.3",
     "vue-jest": "vuejs/vue-jest#refs/pull/343/head",
-    "vue-loader": "^16.2.0",
+    "vue-loader": "^16.3.1",
     "webpack-bundle-analyzer": "^4.4.0"
   },
   "dependencies": {
