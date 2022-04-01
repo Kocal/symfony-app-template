@@ -37,7 +37,7 @@ jobs:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: 'yarn'
     
-            - uses: actions/cache@v2
+            - uses: actions/cache@v3.0.1
               with:
                   path: ${{ env.COMPOSER_CACHE_DIR }}
                   key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -95,7 +95,7 @@ jobs:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: 'yarn'
     
-            - uses: actions/cache@v2
+            - uses: actions/cache@v3.0.1
               with:
                   path: ${{ env.COMPOSER_CACHE_DIR }}
                   key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -154,7 +154,7 @@ jobs:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: 'yarn'
     
-            - uses: actions/cache@v2
+            - uses: actions/cache@v3.0.1
               with:
                   path: ${{ env.COMPOSER_CACHE_DIR }}
                   key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
