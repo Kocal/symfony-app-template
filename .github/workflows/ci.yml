@@ -168,7 +168,7 @@ jobs:
 
             - name: Run Cypress
               if: ${{ env.IS_DEPENDABOT == 'false' && ! github.event.pull_request.draft }}
-              uses: cypress-io/github-action@v2
+              uses: cypress-io/github-action@v4
               with:
                   spec: ${{ matrix.cypress.spec }}
                   # To uncomment when the project will be configured on Cypress Dashboard
@@ -180,7 +180,7 @@ jobs:
 
             - name: Run Cypress (for Dependabot or when pull request is draft)
               if: ${{ env.IS_DEPENDABOT == 'true' || github.event.pull_request.draft }}
-              uses: cypress-io/github-action@v2
+              uses: cypress-io/github-action@v4
 
     auto_approve_and_merge:
         runs-on: ubuntu-latest
